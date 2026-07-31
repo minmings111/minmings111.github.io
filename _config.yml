@@ -30,7 +30,10 @@ linkedin_username: minjeong-lee-50951634b
 # orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
-additional_links: []
+additional_links:
+  - title: minmings111.notion.site
+    icon: notion-icon
+    url: https://minmings111.notion.site/3aca6023d9aa80cd82e5dc2e142bed9f
   # - title: itsgoingto.be
   #   icon: fas fa-globe
   #   url: https://www.itsgoingto.be
@@ -48,15 +51,16 @@ additional_links: []
 about_title: About Me
 about_profile_image: images/LeeMinJeong_id_photo.png
 about_content: | # this will include new lines to allow paragraphs
-  백엔드 개발자로서 신뢰할 수 있는 코드로 안정적인 시스템을 만드는 것을 목표로 하고 있습니다. 주어진 요구사항을 정확히 이해하고, 일정과 품질을 함께 지키는 개발을 중요하게 생각합니다.
-
-  현재는 마지막 팀 프로젝트였던 <a href="https://github.com/minmings111/Kyro-jungle-final"><mark>Kyro</mark></a>를 기반으로, <a href="https://github.com/minmings111/kyro-java"><mark>kyro-java</mark></a>에서 <mark>구조를 재정비</mark>하며 완성도를 높이고 있습니다.
+  <mark>해양 데이터 분석</mark>과 <mark>업무 자동화 경험</mark>을 계기로, 개발에 관심을 갖게 되었습니다. 반복되는 데이터 처리 과정에서 <mark>기준을 세우고</mark> 흐름을 자동화하는 일의 중요성을 체감했습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
+  <mark>신뢰할 수 있는 데이터</mark>를 기반으로 더 <mark>정확한 분석과 가치 있는 서비스</mark>를 만드는 개발자가 되겠습니다.
+  <br><br>
+  현재는 마지막 팀 프로젝트였던 <a href="https://github.com/minmings111/Kyro-jungle-final">Kyro</a>를 기반으로, <a href="https://github.com/minmings111/kyro-java">kyro-java</a>에서 구조를 재정비하며 완성도를 높이고 있습니다.
 
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left # top-middle
+      - layout: top-middle # top-middle
         title: Kyro
         sub_title: 크래프톤 정글
         caption: 2026.06.22. - 2026.07.25.(5명)
@@ -70,62 +74,68 @@ content:
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
         quote: >
-          Prometheus, Loki, Tempo, K8s 메타데이터를 통합해 장애 원인, 영향 범위, 복구 근거를 한 흐름에서 분석하는 관측 데이터 통합 솔루션
+          Prometheus, Loki, Tempo, K8s 메타데이터를 통합해 장애 원인, 영향 범위, 근거를 한 흐름에서 관측·분석하는 통합 솔루션
         description: | # this will include new lines to allow paragraphs
-          Kubernetes 장애 RCA(Root Cause Analysis)를 위한 event-driven evidence ingestion pipeline 구현
-          - Prometheus metrics, Loki logs, Tempo traces, Kubernetes metadata를 수집하고 후속 RCA 처리 흐름에서 사용할 수 있는 공통 evidence schema로 정규화
-          - provider별 collection status를 'completed', 'partial', 'unavailable' 상태와 reason code로 보존해 evidence freshness/completeness validation이 가능하도록 처리
-          - Loki logs에서 severity, 장애 패턴, trace id를 추출하고 민감정보 redaction을 적용해 원인 분석에 필요한 로그 근거만 전달
-          - Prometheus/Tempo/metadata payload 크기를 제한하고 truncation metadata를 남겨 대용량 관측 데이터의 축약 여부를 추적 가능하게 처리
+          1. Kubernetes 장애 분석 <mark>데이터 파이프라인</mark> 구현
+          - metrics/logs/traces/metadata를 공통 Evidence Schema로 수집·정규화
+          - provider별 collection status와 reason code를 기록해 no signal과 collection failure 구분
+          - payload size limit과 truncation metadata로 대용량 telemetry 처리 안정화
+          - Loki logs에서 severity, 장애 패턴, trace id를 추출해 비정형 로그를 RCA용 structured signal로 변환
+          - 민감정보 redaction과 log line limiting을 적용해 분석 정확도와 데이터 노출 위험을 함께 관리
 
-  # - title: Experience # Title for the section
-  #   layout: list # Type of content section (list/text)
-  #   content:
-  #     - layout: left
-  #       title: The Boring Company
-  #       link: boringcompany.com
-  #       # link_text: boringcompany.com
-  #       sub_title: Senior Network System Administrator
-  #       caption: November 2017 - Present
-  #       quote: >
-  #         Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-  #       description: | # this will include new lines to allow paragraphs
-  #         Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+          2. <mark>Event-driven</mark> RCA Workflow 설계
+          - 장애 수집·분석·복구 단계를 이벤트 기반 workflow로 분리
+          - typed event contract로 단계 간 데이터 전달 경계 정리
+          - correlation ID 기반으로 하나의 장애 분석 흐름을 추적 가능하도록 구성
 
-  - title: 관련 경험 및 교육 이수 # Title for the section
+          3. Cluster-Agent <mark>outbound</mark> 수집 구조 구현
+          - cluster-agent가 management server를 polling하는 async pull 구조 구현
+          - provider별 수집 job을 독립 실행해 특정 provider 장애 영향 격리
+          - retry 흐름을 관리해 일부 실패 상황에서도 수집 가능한 근거 확보
+
+  - title: Education & Training
     layout: list # Type of content section (list/text)
     content:
       - layout: left
         title: 크래프톤 정글
         caption: 2026.03.02. - 2026.07.30.
-        sub_title: 뭐라쓰지
-        quote: >
-          몰입형 학습과 팀 프로젝트를 통한 컴퓨터 과학 기초와 운영체제, 네트워크, 알고리즘을 집중적으로 학습한 개발자 교육 과정
+        sub_title: 12기 수료
+        # quote: >
+        #   몰입형 학습과 팀 프로젝트를 통한 컴퓨터 과학 기초와 운영체제, 네트워크, 알고리즘을 집중적으로 학습한 개발자 교육 과정
         description: | # this will include new lines to allow paragraphs
-          PintOS 프로젝트를 통한 컴퓨터 과학 기초와 운영체제, 네트워크 학습
-          팀프로젝트를 통한 동료 학습 및 어쩌구...
+          - 자료구조 및 알고리즘 학습을 통한 문제 해결 역량 강화
+          - C언어, 컴퓨터 구조, 운영체계 등 컴퓨터 과학 기초 학습
+          - 신경망 및 LLM 구현을 통한 AI 모델의 동장 원리 이해 및 활용
 
       - layout: left
         title: 인공지능사관학교
-        caption: 2025.06.##. - 2026.##.##.
-        sub_title: 뭐라 쓰지..
-        quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        caption: 2025.06.02. - 2025.12.31.
+        sub_title: 6기 수료
+        # quote: >
+        #   AI 관련 기술을 보유한 실무인재 양성 교육 프로그램
         description: | # this will include new lines to allow paragraphs
-          JAVA랑 AI 관련 공부했다.....
-          파이널 프로젝트를 하면서 열심히 공부했다....
+          - 머신러닝·딥러닝 핵심 개념 및 모델링 프로세스 학습
+          - Cursor, ChatGPT 등 생성형 AI 도구 활용 및 실습
+          - Java 기반 객체지향 프로그래밍, Spring Boot, Oracle DB, React 기초 학습
 
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+      - layout: left
+        title: 전남대학교 대학원
+        sub_title: 이공계 석사 졸업
+        caption: 2021.09. - 2023.02.
+        description: | # this will include new lines to allow paragraphs
+          - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교: 요각류 중심으로
 
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+  # - title: A Little More About Me
+  #   layout: text
+  #   content: | # this will include new lines to allow paragraphs
+  #     Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+  #     - Rock climbing
+  #     - Gaming
+  #     - Knitting
+  #     - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+
+  #     Look at this cool image
+  #     ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
 
 # Footer
 footer_show_references: true
