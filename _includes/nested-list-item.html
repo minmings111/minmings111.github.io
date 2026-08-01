@@ -1,8 +1,11 @@
 {% assign nested_item = include.nested_item %}
+{% assign nested_layout = nested_item.layout | default: 'top-middle' %}
 
-<article class="nested-list-item">
-  <div class="nested-list-heading">
-    <h5 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h5>
+<article class="nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
+  <div class="nested-list-details">
+    <div class="nested-list-heading">
+      <h5 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h5>
+    </div>
     {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links -%}
       <div class="nested-list-meta">
         {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
@@ -26,12 +29,21 @@
       </div>
     {%- endif -%}
   </div>
-  {%- if nested_item.quote -%}
-    <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
-  {%- endif -%}
-  {%- if nested_item.description -%}
-    <div class="nested-list-body">
-      {{ nested_item.description | strip | markdownify }}
-    </div>
-  {%- endif -%}
+  <div class="nested-list-content">
+    {%- if nested_item.quote -%}
+      <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
+    {%- endif -%}
+    {%- if nested_item.description -%}
+      <div class="nested-list-body">
+        {{ nested_item.description | strip | markdownify }}
+      </div>
+    {%- endif -%}
+    {%- if nested_item.sub_items -%}
+      <div class="nested-content">
+        {% for child_entry in nested_item.sub_items %}
+          {% include nested-list-item.html nested_item=child_entry %}
+        {% endfor %}
+      </div>
+    {%- endif -%}
+  </div>
 </article>

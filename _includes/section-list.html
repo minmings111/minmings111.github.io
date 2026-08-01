@@ -1,4 +1,16 @@
 {% for entry in include.content %}
+  {% assign has_regular_sub_items = false %}
+  {% assign has_sub_left_items = false %}
+  {%- if entry.sub_items -%}
+    {% for nested_entry in entry.sub_items %}
+      {% assign nested_layout = nested_entry.layout | default: 'top-middle' %}
+      {%- if nested_layout == 'sub-left' -%}
+        {% assign has_sub_left_items = true %}
+      {%- else -%}
+        {% assign has_regular_sub_items = true %}
+      {%- endif -%}
+    {% endfor %}
+  {%- endif -%}
   <div class="row clearfix layout layout-{{ entry.layout | default: 'left' }} border-{{ entry.border | default: 'no' }}">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4 id="{{ entry.title | slugify }}">{{ entry.title }}</h4>
@@ -28,13 +40,26 @@
       {%- if entry.description -%}
         {{ entry.description | strip | markdownify }}
       {%- endif -%}
-      {%- if entry.sub_items -%}
+      {%- if has_regular_sub_items -%}
         <div class="nested-content">
           {% for nested_entry in entry.sub_items %}
-            {% include nested-list-item.html nested_item=nested_entry %}
+            {% assign nested_layout = nested_entry.layout | default: 'top-middle' %}
+            {%- unless nested_layout == 'sub-left' -%}
+              {% include nested-list-item.html nested_item=nested_entry %}
+            {%- endunless -%}
           {% endfor %}
         </div>
       {%- endif -%}
     </div>
+    {%- if has_sub_left_items -%}
+      <div class="col-xs-12 col-print-12 nested-content nested-content-sub-left">
+        {% for nested_entry in entry.sub_items %}
+          {% assign nested_layout = nested_entry.layout | default: 'top-middle' %}
+          {%- if nested_layout == 'sub-left' -%}
+            {% include nested-list-item.html nested_item=nested_entry %}
+          {%- endif -%}
+        {% endfor %}
+      </div>
+    {%- endif -%}
   </div>
 {% endfor %}
