@@ -52,19 +52,20 @@ additional_links:
 about_title: About Me
 about_profile_image: images/LeeMinJeong_id_photo.png
 about_content: | # this will include new lines to allow paragraphs
-  해양 데이터 분석과 업무 자동화 경험을 계기로, 개발에 관심을 갖게 되었습니다. 반복되는 데이터 처리 과정에서 기준을 세우고 흐름을 자동화하는 일의 중요성을 체감했습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
+  반복되는 해양 데이터 분석과 업무를 코드를 통해 자동화하는 경험을 계기로, 데이터를 다루는 개발에 관심을 갖게 되었습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
+  <br><br>
   신뢰할 수 있는 데이터를 기반으로 더 정확한 분석과 가치 있는 서비스를 만드는 개발자가 되겠습니다.
 
 content:
   - title: Work & Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left
+      - layout: left-top
         title: 크래프톤 정글
         sub_title: 12기 수료
         caption: 2026.03.02. - 2026.07.30.
         sub_items:
-          - layout: top-middle
+          - layout: top-left
             title: Kyro
             sub_title: 팀 프로젝트(5명)
             caption: 2026.06.22. - 2026.07.25.
@@ -100,12 +101,12 @@ content:
             quote: >
               Kubernetes 장애 분석부터 복구 PR 제안까지 지원하는 AI 운영 플랫폼
             description: | # this will include new lines to allow paragraphs
-              1. Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
-              2. Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
-              3. 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
-              4. ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
+              - Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
+              - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
+              - 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
+              - ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
 
-          - layout: top-middle
+          - layout: top-left
             title: RepoPilot
             sub_title: 개인 프로젝트
             caption: 2026.06.05. - 2026.06.19.
@@ -137,11 +138,11 @@ content:
             quote: >
               GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
-              1. GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
-              2. 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
-              3. Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+              - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
+              - 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
+              - Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
 
-          - layout: top-middle
+          - layout: top-left
             title: PintOS
             sub_title: 팀 프로젝트(4명)
             caption: 2026.04.24. - 2026.05.21.
@@ -166,17 +167,17 @@ content:
             quote: >
               교육용 OS 커널 구현 프로젝트
             description: | # this will include new lines to allow paragraphs
-              1. Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
-              2. 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
-              3. Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
-              4. Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
+              - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
+              - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
+              - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
+              - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
 
-      - layout: left
+      - layout: left-top
         title: 인공지능사관학교
         sub_title: 6기 수료
         caption: 2025.06.02. - 2025.12.12.
         sub_items:
-          - layout: top-middle
+          - layout: top-left
             title: Medi
             sub_title: 팀 프로젝트(5명)
             caption: 2026.10.17. - 2026.12.07.
@@ -204,17 +205,17 @@ content:
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
-              1. 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
-              2. 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
-              3. YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
-              4. AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
+              - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
+              - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
+              - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
+              - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
 
-      - layout: left
+      - layout: left-top
         title: 바다생태연구소
         # sub_title: 연구원
         caption: 2023.03.02. - 2025.03.31.
         sub_items:
-          - layout: top-middle
+          - layout: top-left
             title: 해양 생태팀
             sub_title: 연구원
             # caption: 2026.06.22. - 2026.07.25.(5명)
@@ -236,10 +237,11 @@ content:
               - title: PRIMER
                 image: images/skills/primer.png
             description: | # this will include new lines to allow paragraphs
-              1. 현장 조사
-              2. 동물플랑크톤, 해조류 시료 분석 및 보고서 작성
-              3. 수산 생물 생리 및 배양 시험
-              4. DNA sequence 및 계통 분석
+              - 현장 조사
+              - 동물플랑크톤, 해조류 시료 분석 및 결과 보고서 작성
+              - 수산 생물 생리 및 배양 시험
+              - 생물 데이터 분석 및 기타 업무 자동화
+              - DNA sequence 및 계통 분석
 
   - title: Education
     layout: list # Type of content section (list/text)
@@ -250,7 +252,7 @@ content:
         caption: 2021.09. - 2023.02.
         description: | # this will include new lines to allow paragraphs
           - 이공계 석사 졸업
-          - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교: 요각류 중심으로
+          - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교<br>: 요각류 중심으로
 
   # - title: A Little More About Me
   #   layout: text

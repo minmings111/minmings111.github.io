@@ -68,12 +68,25 @@ mark {
   margin-top: 16px;
 }
 
+.layout-details-top > .content > .nested-content {
+  margin-top: 0;
+}
+
 .nested-list-item {
   padding-top: 20px;
 }
 
+.layout-details-top > .content > .nested-content > .nested-list-item:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .layout-has-sub-left {
   margin-bottom: 0;
+}
+
+.layout-details-top > .details {
+  justify-content: flex-start;
 }
 
 .layout-has-sub-left .details {
@@ -117,6 +130,27 @@ mark {
 .nested-list-item.nested-layout-top-middle .nested-list-quote {
   margin-top: 10px;
   padding-top: 0;
+}
+
+.nested-list-item.nested-layout-top-left .details,
+.nested-list-item.nested-layout-top-left .nested-list-content {
+  text-align: left;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-heading h4 {
+  font-size: 30px;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-quote {
+  margin-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  text-align: left;
+}
+
+.nested-list-item.nested-layout-top-left .skill-icons {
+  justify-content: flex-start;
 }
 
 .nested-list-item + .nested-list-item {

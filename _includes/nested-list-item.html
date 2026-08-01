@@ -3,6 +3,8 @@
 {% assign nested_render_layout = nested_layout %}
 {% if nested_layout == 'sub-left' %}
   {% assign nested_render_layout = 'left' %}
+{% elsif nested_layout == 'top-left' %}
+  {% assign nested_render_layout = 'top' %}
 {% endif %}
 
 <article class="row clearfix layout layout-{{ nested_render_layout }} nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
