@@ -89,7 +89,7 @@ content:
                 icon: fab fa-github
                 url: https://github.com/minmings111/Kyro-jungle-final
             quote: >
-              GitHub 기반 AI 개발 워크스페이스
+              GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
               1. GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
               2. 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
