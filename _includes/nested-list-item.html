@@ -1,0 +1,37 @@
+{% assign nested_item = include.nested_item %}
+
+<article class="nested-list-item">
+  <div class="nested-list-heading">
+    <h5 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h5>
+    {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links -%}
+      <div class="nested-list-meta">
+        {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
+        {%- if nested_item.caption -%}<p>{{ nested_item.caption }}</p>{%- endif -%}
+        {%- if nested_item.link -%}
+          <p>
+            {% include a.html href=nested_item.link class="link" %}
+              {%- if nested_item.link_text -%}{{ nested_item.link_text }}{%- else -%}{{ nested_item.link }}{%- endif -%}
+            </a>
+          </p>
+        {%- endif -%}
+        {%- if nested_item.additional_links -%}
+          <p class="no-print aditional-links nested-list-links">
+            {% for link in nested_item.additional_links %}
+              {% include a.html href=link.url class="" %}
+                <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
+              </a>
+            {% endfor %}
+          </p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if nested_item.quote -%}
+    <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
+  {%- endif -%}
+  {%- if nested_item.description -%}
+    <div class="nested-list-body">
+      {{ nested_item.description | strip | markdownify }}
+    </div>
+  {%- endif -%}
+</article>

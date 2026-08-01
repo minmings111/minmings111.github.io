@@ -18,6 +18,7 @@ h3 {
 
 h2,
 h4,
+.nested-list-heading h5,
 .layout .content ol > li {
   font-size: 22px;
   line-height: 1.35;
@@ -26,6 +27,11 @@ h4,
 h2,
 h4 {
   font-weight: 500;
+}
+
+.nested-list-heading h5 {
+  font-weight: 700;
+  margin: 0 0 4px;
 }
 
 p,
@@ -48,6 +54,41 @@ mark {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.nested-content {
+  margin-top: 16px;
+}
+
+.nested-list-item {
+  padding-top: 20px;
+}
+
+.nested-list-item + .nested-list-item {
+  border-top: 1px solid #CCCCCC;
+  margin-top: 20px;
+}
+
+.nested-list-item .nested-content {
+  border-left: 1px solid #CCCCCC;
+  padding-left: 20px;
+}
+
+.nested-list-meta {
+  margin-bottom: 10px;
+}
+
+.nested-list-meta p {
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.nested-list-links {
+  margin-top: 6px;
+}
+
+.nested-list-body > :last-child {
+  margin-bottom: 0;
 }
 
 .layout .content ol {

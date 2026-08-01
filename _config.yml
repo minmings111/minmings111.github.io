@@ -57,60 +57,37 @@ about_content: | # this will include new lines to allow paragraphs
   현재는 마지막 팀 프로젝트였던 <a href="https://github.com/minmings111/Kyro-jungle-final">Kyro</a>를 기반으로, <a href="https://github.com/minmings111/kyro-java">kyro-java</a>에서 구조를 재정비하며 완성도를 높이고 있습니다.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle # top-middle
-        title: Kyro
-        sub_title: 크래프톤 정글
-        caption: 2026.06.22. - 2026.07.25.(5명)
-        # link: github.com/minmings111/Kyro-jungle-final
-        # link_text: Project Website
-        additional_links:
-          - title: github.com/minmings111/Kyro-jungle-final
-            icon: fab fa-github
-            url: github.com/minmings111/Kyro-jungle-final
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          Prometheus, Loki, Tempo, K8s 메타데이터를 통합해 장애 원인, 영향 범위, 근거를 한 흐름에서 관측·분석하는 통합 솔루션
-        description: | # this will include new lines to allow paragraphs
-          1. Kubernetes 장애 분석용 Evidence 수집·정규화 파이프라인 구현
-          - Prometheus metrics, Loki logs, Tempo traces, Kubernetes metadata를 RCA 입력 구조에 맞춰 수집·정규화
-          - Kubernetes workload, pod, service, endpoint, config, resource quota 등 장애 분석에 필요한 metadata context 수집
-          - Loki logs에서 severity, 장애 패턴, trace id를 추출해 비정형 로그를 RCA용 structured signal로 변환
-
-          2. 대용량·비정형 관측 데이터 처리 안정성 개선
-          - provider query 단위 예외 처리로 일부 수집 실패 시에도 확보된 evidence payload 유지
-          - Prometheus/Tempo/Kubernetes metadata payload size limit과 truncation metadata를 구현해 대용량 telemetry 전송 크기 제어
-          - Loki log redaction, line limiting, matched entry limit을 적용해 민감정보 노출과 과도한 로그 전달 제어
-
-  - title: Education & Training
+  - title: Work & Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
         title: 크래프톤 정글
-        caption: 2026.03.02. - 2026.07.30.
         sub_title: 12기 수료
-        # quote: >
-        #   몰입형 학습과 팀 프로젝트를 통한 컴퓨터 과학 기초와 운영체제, 네트워크, 알고리즘을 집중적으로 학습한 개발자 교육 과정
-        description: | # this will include new lines to allow paragraphs
-          - 자료구조 및 알고리즘 학습을 통한 문제 해결 역량 강화
-          - C언어, 컴퓨터 구조, 운영체계 등 컴퓨터 과학 기초 학습
-          - 신경망 및 LLM 구현을 통한 AI 모델의 동장 원리 이해 및 활용
+        caption: 2026.03.02. - 2026.07.30.
+        sub_items:
+          - title: Kyro
+            sub_title: 팀 프로젝트
+            caption: 2026.06.22. - 2026.07.25.(5명)
+            additional_links:
+              - title: github.com/minmings111/Kyro-jungle-final
+                icon: fab fa-github
+                url: https://github.com/minmings111/Kyro-jungle-final
+            quote: >
+              Prometheus, Loki, Tempo, K8s 메타데이터를 통합해 장애 원인, 영향 범위, 근거를 한 흐름에서 관측·분석하는 통합 솔루션
+            description: | # this will include new lines to allow paragraphs
+              1. Kubernetes 장애 분석용 Evidence 수집·정규화 파이프라인 구현
+              - Prometheus metrics, Loki logs, Tempo traces, Kubernetes metadata를 RCA 입력 구조에 맞춰 수집·정규화
+              - Kubernetes workload, pod, service, endpoint, config, resource quota 등 장애 분석에 필요한 metadata context 수집
+              - Loki logs에서 severity, 장애 패턴, trace id를 추출해 비정형 로그를 RCA용 structured signal로 변환
 
-      - layout: left
-        title: 인공지능사관학교
-        caption: 2025.06.02. - 2025.12.31.
-        sub_title: 6기 수료
-        # quote: >
-        #   AI 관련 기술을 보유한 실무인재 양성 교육 프로그램
-        description: | # this will include new lines to allow paragraphs
-          - 머신러닝·딥러닝 핵심 개념 및 모델링 프로세스 학습
-          - Cursor, ChatGPT 등 생성형 AI 도구 활용 및 실습
-          - Java 기반 객체지향 프로그래밍, Spring Boot, Oracle DB, React 기초 학습
+              2. 대용량·비정형 관측 데이터 처리 안정성 개선
+              - provider query 단위 예외 처리로 일부 수집 실패 시에도 확보된 evidence payload 유지
+              - Prometheus/Tempo/Kubernetes metadata payload size limit과 truncation metadata를 구현해 대용량 telemetry 전송 크기 제어
+              - Loki log redaction, line limiting, matched entry limit을 적용해 민감정보 노출과 과도한 로그 전달 제어
 
+  - title: Education
+    layout: list # Type of content section (list/text)
+    content:
       - layout: left
         title: 전남대학교 대학원
         sub_title: 환경해양학과

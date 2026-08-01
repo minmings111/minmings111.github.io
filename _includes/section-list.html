@@ -1,0 +1,40 @@
+{% for entry in include.content %}
+  <div class="row clearfix layout layout-{{ entry.layout | default: 'left' }} border-{{ entry.border | default: 'no' }}">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+      <h4 id="{{ entry.title | slugify }}">{{ entry.title }}</h4>
+      {%- if entry.sub_title -%}<p><b>{{ entry.sub_title }}</b></p>{%- endif -%}
+      {%- if entry.caption -%}<p>{{ entry.caption }}</p>{%- endif -%}
+
+      {%- if entry.link -%}
+        {% include a.html href=entry.link class="link" %}
+          {%- if entry.link_text -%}{{ entry.link_text }}{%- else -%}{{ entry.link }}{%- endif -%}
+        </a>
+      {%- endif -%}
+
+      {%- if entry.additional_links -%}
+        <p class="no-print aditional-links">
+          {% for link in entry.additional_links %}
+            {% include a.html href=link.url class="" %}
+              <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
+            </a>
+          {% endfor %}
+        </p>
+      {%- endif -%}
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+      {%- if entry.quote -%}
+        <p class="quote">{{ entry.quote }}</p>
+      {%- endif -%}
+      {%- if entry.description -%}
+        {{ entry.description | strip | markdownify }}
+      {%- endif -%}
+      {%- if entry.sub_items -%}
+        <div class="nested-content">
+          {% for nested_entry in entry.sub_items %}
+            {% include nested-list-item.html nested_item=nested_entry %}
+          {% endfor %}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{% endfor %}
