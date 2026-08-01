@@ -64,7 +64,7 @@ content:
         sub_title: 12기 수료
         caption: 2026.03.02. - 2026.07.30.
         sub_items:
-          - layout: sub-left
+          - layout: top-middle
             title: Kyro
             sub_title: 팀 프로젝트(5명)
             caption: 2026.06.22. - 2026.07.25.
@@ -72,6 +72,31 @@ content:
               - title: github.com/minmings111/Kyro-jungle-final
                 icon: fab fa-github
                 url: https://github.com/minmings111/Kyro-jungle-final
+            skill_icons:
+              - title: Kubernetes
+                image: images/skills/kubernetes.svg
+              - title: Python
+                image: images/skills/python.svg
+              - title: FastAPI
+                image: images/skills/fastapi.svg
+              - title: PostgreSQL
+                image: images/skills/postgresql.svg
+              - title: Prometheus
+                image: images/skills/prometheus.svg
+              - title: Loki
+                image: images/skills/loki.svg
+              - title: Tempo
+                image: images/skills/tempo.svg
+              - title: OpenTelemetry
+                image: images/skills/opentelemetry.svg
+              - title: Docker
+                image: images/skills/docker.svg
+              - title: Helm
+                image: images/skills/helm.svg
+              - title: React
+                image: images/skills/react.svg
+              - title: TypeScript
+                image: images/skills/typescript.svg
             quote: >
               Kubernetes 장애 분석부터 복구 PR 제안까지 지원하는 AI 운영 플랫폼
             description: | # this will include new lines to allow paragraphs
@@ -80,14 +105,14 @@ content:
               3. 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
               4. ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
 
-          - layout: sub-left
+          - layout: top-middle
             title: RepoPilot
             sub_title: 개인 프로젝트
             caption: 2026.06.05. - 2026.06.19.
             additional_links:
-              - title: github.com/minmings111/Kyro-jungle-final
+              - title: github.com/minmings111/RepoPilot
                 icon: fab fa-github
-                url: https://github.com/minmings111/Kyro-jungle-final
+                url: https://github.com/minmings111/RepoPilot
             quote: >
               GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
@@ -95,14 +120,17 @@ content:
               2. 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
               3. Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
 
-          - layout: sub-left
+          - layout: top-middle
             title: PintOS
             sub_title: 팀 프로젝트(4명)
             caption: 2026.04.24. - 2026.05.21.
             additional_links:
-              - title: github.com/minmings111/Kyro-jungle-final
+              - title: github.com/Jungle-12-303/week11-team-02-pintos-vm
                 icon: fab fa-github
-                url: https://github.com/minmings111/Kyro-jungle-final
+                url: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
+              - title: github.com/Jungle-12-303/week09-team-05-pintos-threads
+                icon: fab fa-github
+                url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
             quote: >
               교육용 OS 커널 구현 프로젝트
             description: | # this will include new lines to allow paragraphs
@@ -116,14 +144,14 @@ content:
         sub_title: 6기 수료
         caption: 2025.06.02. - 2025.12.12.
         sub_items:
-          - layout: sub-left
+          - layout: top-middle
             title: Medi
             sub_title: 팀 프로젝트(5명)
             caption: 2026.10.17. - 2026.12.07.
             additional_links:
               - title: https://github.com/minmings111/MEDI_Backend_aica
                 icon: fab fa-github
-                url: https://github.com/minmings111/MEDI_Backend_aica.git
+                url: https://github.com/minmings111/MEDI_Backend_aica
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
@@ -137,7 +165,7 @@ content:
         # sub_title: 연구원
         caption: 2023.03.02. - 2025.03.31.
         sub_items:
-          - layout: sub-left
+          - layout: top-middle
             title: 해양 생태팀
             sub_title: 연구원
             # caption: 2026.06.22. - 2026.07.25.(5명)

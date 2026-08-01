@@ -80,6 +80,11 @@ mark {
   margin-bottom: 0;
 }
 
+.layout-has-group-divider {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 28px;
+}
+
 .nested-content-sub-left {
   margin-top: 24px;
   padding-bottom: 28px;
@@ -102,7 +107,16 @@ mark {
 }
 
 .nested-list-item.nested-layout-top-middle .nested-list-content {
-  margin-top: 12px;
+  margin-top: 0;
+}
+
+.nested-list-item.nested-layout-top-middle .nested-list-meta {
+  margin-bottom: 0;
+}
+
+.nested-list-item.nested-layout-top-middle .nested-list-quote {
+  margin-top: 10px;
+  padding-top: 0;
 }
 
 .nested-list-item + .nested-list-item {
@@ -139,6 +153,65 @@ mark {
 .nested-list-body,
 .nested-list-body li {
   font-size: 16px;
+}
+
+.skill-icons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  text-align: inherit;
+}
+
+.layout-top-middle .skill-icons,
+.nested-layout-top-middle .skill-icons {
+  justify-content: center;
+}
+
+.skill-icon-item {
+  align-items: center;
+  display: inline-flex;
+  height: 16px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+}
+
+.skill-icon-item > a,
+.skill-icon-item > span {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  height: 16px;
+  justify-content: center;
+  width: 16px;
+}
+
+.skill-icon-item i {
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.skill-icon-item img {
+  display: block;
+  filter: brightness(0) invert(1);
+  height: 16px;
+  mix-blend-mode: difference;
+  object-fit: contain;
+  opacity: 0.95;
+  width: 16px;
+}
+
+.skill-icon-text {
+  color: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 @media screen and (max-width: 767px) {

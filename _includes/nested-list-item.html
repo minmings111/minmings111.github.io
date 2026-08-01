@@ -10,7 +10,7 @@
     <div class="nested-list-heading">
       <h4 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h4>
     </div>
-    {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links -%}
+    {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links or nested_item.skill_icons -%}
       <div class="nested-list-meta">
         {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
         {%- if nested_item.caption -%}<p>{{ nested_item.caption }}</p>{%- endif -%}
@@ -29,6 +29,9 @@
               </a>
             {% endfor %}
           </p>
+        {%- endif -%}
+        {%- if nested_item.skill_icons -%}
+          {% include skill-icons.html icons=nested_item.skill_icons %}
         {%- endif -%}
       </div>
     {%- endif -%}
