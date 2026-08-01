@@ -14,13 +14,12 @@ h3 {
   font-size: 32px;
   line-height: 1.25;
   font-weight: 700;
+  text-align: left;
 }
 
 h2,
-h4,
-.nested-list-heading h5,
-.layout .content ol > li {
-  font-size: 16px;
+h4 {
+  font-size: 22px;
   line-height: 1.35;
 }
 
@@ -29,17 +28,10 @@ h4 {
   font-weight: 500;
 }
 
-.nested-list-heading h5 {
-  font-weight: 700;
-  margin: 0 0 4px;
-}
-
 p,
 .header-right p,
 .layout .details p,
 .layout .details .link,
-.layout .content ul,
-.layout .content ol > li > ul,
 p.quote {
   font-size: 16px;
   line-height: 1.6;
@@ -56,6 +48,21 @@ mark {
   background-repeat: no-repeat;
 }
 
+.intro-container > .row.clearfix {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.intro-container > .row.clearfix::before,
+.intro-container > .row.clearfix::after {
+  display: none;
+}
+
+.intro-container > .row.clearfix > [class*="col-"] {
+  float: none;
+}
+
 .nested-content {
   margin-top: 16px;
 }
@@ -64,24 +71,29 @@ mark {
   padding-top: 20px;
 }
 
-.nested-content-sub-left {
-  clear: both;
-}
-
-.nested-list-item.nested-layout-left,
-.nested-list-item.nested-layout-sub-left {
-  display: grid;
-  grid-template-columns: minmax(140px, 24%) minmax(0, 1fr);
-  column-gap: 28px;
-}
-
-.nested-list-item.nested-layout-left .nested-list-meta,
-.nested-list-item.nested-layout-sub-left .nested-list-meta {
+.layout-has-sub-left {
   margin-bottom: 0;
 }
 
+.layout-has-sub-left .details {
+  margin-bottom: 0;
+}
+
+.nested-content-sub-left {
+  margin-top: 24px;
+  padding-bottom: 28px;
+}
+
+.nested-content-has-divider {
+  border-bottom: 1px solid #cccccc;
+}
+
 .nested-list-item.nested-layout-sub-left {
-  padding-left: var(--nested-sub-left-indent, 72px);
+  padding-left: var(--nested-sub-left-indent, 48px);
+}
+
+.nested-list-item.nested-layout-sub-left .nested-list-meta {
+  margin-bottom: 0;
 }
 
 .nested-list-item.nested-layout-sub-left .nested-list-content {
@@ -93,8 +105,20 @@ mark {
 }
 
 .nested-list-item + .nested-list-item {
-  border-top: 1px solid #cccccc;
   margin-top: 20px;
+}
+
+.nested-content-sub-left .nested-list-item.layout {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.nested-content-sub-left .nested-list-item + .nested-list-item {
+  margin-top: 36px;
+}
+
+.nested-content-sub-left .nested-list-item .details {
+  margin-bottom: 0;
 }
 
 .nested-list-item .nested-content {
@@ -107,59 +131,23 @@ mark {
 }
 
 .nested-list-meta p {
-  margin-bottom: 2px;
-  text-align: left;
+  margin-bottom: 3px;
+  text-align: inherit;
 }
 
-.nested-list-links {
-  margin-top: 6px;
-}
-
-.nested-list-body > :last-child {
-  margin-bottom: 0;
+.nested-list-body,
+.nested-list-body li {
+  font-size: 16px;
 }
 
 @media screen and (max-width: 767px) {
-  .nested-list-item.nested-layout-left,
-  .nested-list-item.nested-layout-sub-left {
-    display: block;
-  }
-
-  .nested-list-item.nested-layout-left .nested-list-content,
-  .nested-list-item.nested-layout-sub-left .nested-list-content {
-    margin-top: 12px;
+  .intro-container > .row.clearfix {
+    flex-direction: column;
   }
 
   .nested-list-item.nested-layout-sub-left {
     padding-left: var(--nested-sub-left-indent, 16px);
   }
-}
-
-.layout .content ol {
-  padding-left: 32px;
-  text-align: justify;
-}
-
-.layout .content ol > li {
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.layout .content ol > li::marker {
-  font-weight: 700;
-}
-
-.layout .content ol > li > ul {
-  font-weight: 400;
-  margin-top: 12px;
-}
-
-// .layout .content ol > li + li {
-//   margin-top: 32px;
-// }
-
-.layout .content ol > li > ul > li {
-  margin-bottom: 12px;
 }
 
 .notion-icon {

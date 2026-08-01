@@ -1,10 +1,14 @@
 {% assign nested_item = include.nested_item %}
 {% assign nested_layout = nested_item.layout | default: 'top-middle' %}
+{% assign nested_render_layout = nested_layout %}
+{% if nested_layout == 'sub-left' %}
+  {% assign nested_render_layout = 'left' %}
+{% endif %}
 
-<article class="nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
-  <div class="nested-list-details">
+<article class="row clearfix layout layout-{{ nested_render_layout }} nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details nested-list-details">
     <div class="nested-list-heading">
-      <h5 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h5>
+      <h4 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h4>
     </div>
     {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links -%}
       <div class="nested-list-meta">
@@ -18,7 +22,7 @@
           </p>
         {%- endif -%}
         {%- if nested_item.additional_links -%}
-          <p class="no-print aditional-links nested-list-links">
+          <p class="no-print aditional-links">
             {% for link in nested_item.additional_links %}
               {% include a.html href=link.url class="" %}
                 <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
@@ -29,7 +33,7 @@
       </div>
     {%- endif -%}
   </div>
-  <div class="nested-list-content">
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content nested-list-content">
     {%- if nested_item.quote -%}
       <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
     {%- endif -%}

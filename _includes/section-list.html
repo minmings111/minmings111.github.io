@@ -11,7 +11,7 @@
       {%- endif -%}
     {% endfor %}
   {%- endif -%}
-  <div class="row clearfix layout layout-{{ entry.layout | default: 'left' }} border-{{ entry.border | default: 'no' }}">
+  <div class="row clearfix layout layout-{{ entry.layout | default: 'left' }}{% if has_sub_left_items %} layout-has-sub-left{% endif %} border-{{ entry.border | default: 'no' }}">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4 id="{{ entry.title | slugify }}">{{ entry.title }}</h4>
       {%- if entry.sub_title -%}<p><b>{{ entry.sub_title }}</b></p>{%- endif -%}
@@ -51,8 +51,10 @@
         </div>
       {%- endif -%}
     </div>
-    {%- if has_sub_left_items -%}
-      <div class="col-xs-12 col-print-12 nested-content nested-content-sub-left">
+  </div>
+  {%- if has_sub_left_items -%}
+    <div class="row clearfix nested-content nested-content-sub-left{% unless forloop.last %} nested-content-has-divider{% endunless %}">
+      <div class="col-xs-12 col-print-12">
         {% for nested_entry in entry.sub_items %}
           {% assign nested_layout = nested_entry.layout | default: 'top-middle' %}
           {%- if nested_layout == 'sub-left' -%}
@@ -60,6 +62,6 @@
           {%- endif -%}
         {% endfor %}
       </div>
-    {%- endif -%}
-  </div>
+    </div>
+  {%- endif -%}
 {% endfor %}

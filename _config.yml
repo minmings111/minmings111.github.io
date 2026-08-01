@@ -9,7 +9,8 @@ version: 2
 name: 이민정
 title: 신입 백엔드 개발자
 email: minmings111@gmail.com
-website: www.github.com/minmings111
+phone: 010-2159-6367
+# website: www.github.com/minmings111
 
 # Dark Mode (true/false/never)
 darkmode: false
@@ -51,85 +52,106 @@ additional_links:
 about_title: About Me
 about_profile_image: images/LeeMinJeong_id_photo.png
 about_content: | # this will include new lines to allow paragraphs
-  <mark>해양 데이터 분석</mark>과 <mark>업무 자동화 경험</mark>을 계기로, 개발에 관심을 갖게 되었습니다. 반복되는 데이터 처리 과정에서 <mark>기준을 세우고</mark> 흐름을 자동화하는 일의 중요성을 체감했습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
-  <mark>신뢰할 수 있는 데이터</mark>를 기반으로 더 <mark>정확한 분석과 가치 있는 서비스</mark>를 만드는 개발자가 되겠습니다.
-  <br><br>
-  현재는 마지막 팀 프로젝트였던 <a href="https://github.com/minmings111/Kyro-jungle-final">Kyro</a>를 기반으로, <a href="https://github.com/minmings111/kyro-java">kyro-java</a>에서 구조를 재정비하며 완성도를 높이고 있습니다.
+  해양 데이터 분석과 업무 자동화 경험을 계기로, 개발에 관심을 갖게 되었습니다. 반복되는 데이터 처리 과정에서 기준을 세우고 흐름을 자동화하는 일의 중요성을 체감했습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
+  신뢰할 수 있는 데이터를 기반으로 더 정확한 분석과 가치 있는 서비스를 만드는 개발자가 되겠습니다.
 
 content:
   - title: Work & Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: sub-left
+      - layout: left
         title: 크래프톤 정글
         sub_title: 12기 수료
         caption: 2026.03.02. - 2026.07.30.
         sub_items:
-          - layout: left
+          - layout: sub-left
             title: Kyro
-            sub_title: 팀 프로젝트
-            caption: 2026.06.22. - 2026.07.25.(5명)
+            sub_title: 팀 프로젝트(5명)
+            caption: 2026.06.22. - 2026.07.25.
             additional_links:
               - title: github.com/minmings111/Kyro-jungle-final
                 icon: fab fa-github
                 url: https://github.com/minmings111/Kyro-jungle-final
             quote: >
-              좀 더 포괄적인 설명
+              Kubernetes 장애 분석부터 복구 PR 제안까지 지원하는 AI 운영 플랫폼
             description: | # this will include new lines to allow paragraphs
-              1. Kubernetes 장애 분석용 Evidence 수집·정규화 파이프라인 구현 & 성과
-              2. 대용량·비정형 관측 데이터 처리 안정성 개선
+              1. Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
+              2. Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
+              3. 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
+              4. ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
 
-          - layout: left
+          - layout: sub-left
+            title: RepoPilot
+            sub_title: 개인 프로젝트
+            caption: 2026.06.05. - 2026.06.19.
+            additional_links:
+              - title: github.com/minmings111/Kyro-jungle-final
+                icon: fab fa-github
+                url: https://github.com/minmings111/Kyro-jungle-final
+            quote: >
+              GitHub 기반 AI 개발 워크스페이스
+            description: | # this will include new lines to allow paragraphs
+              1. GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
+              2. 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
+              3. Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+
+          - layout: sub-left
             title: PintOS
-            sub_title: 팀 프로젝트
-            caption: 2026.06.22. - 2026.07.25.(4명)
+            sub_title: 팀 프로젝트(4명)
+            caption: 2026.04.24. - 2026.05.21.
             additional_links:
               - title: github.com/minmings111/Kyro-jungle-final
                 icon: fab fa-github
                 url: https://github.com/minmings111/Kyro-jungle-final
             quote: >
-              핀토스란?
+              교육용 OS 커널 구현 프로젝트
             description: | # this will include new lines to allow paragraphs
-              1. 알람.. 우선순위
-              2. 이것저것
+              1. Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
+              2. 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
+              3. Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
+              4. Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
 
-      - layout: sub-left
+      - layout: left
         title: 인공지능사관학교
         sub_title: 6기 수료
-        caption: 2026.03.02. - 2026.07.30.
+        caption: 2025.06.02. - 2025.12.12.
         sub_items:
-          - layout: left
-            title: Kyro
-            sub_title: 팀 프로젝트
-            caption: 2026.06.22. - 2026.07.25.(5명)
+          - layout: sub-left
+            title: Medi
+            sub_title: 팀 프로젝트(5명)
+            caption: 2026.10.17. - 2026.12.07.
             additional_links:
-              - title: github.com/minmings111/Kyro-jungle-final
+              - title: https://github.com/minmings111/MEDI_Backend_aica
                 icon: fab fa-github
-                url: https://github.com/minmings111/Kyro-jungle-final
+                url: https://github.com/minmings111/MEDI_Backend_aica.git
             quote: >
-              좀 더 포괄적인 설명
+              YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
-              1. Kubernetes 장애 분석용 Evidence 수집·정규화 파이프라인 구현 & 성과
-              2. 대용량·비정형 관측 데이터 처리 안정성 개선
+              1. 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
+              2. 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
+              3. YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
+              4. AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
 
-      - layout: sub-left
+      - layout: left
         title: 바다생태연구소
-        sub_title: 연구원
-        caption: 2026.03.02. - 2026.07.30.
+        # sub_title: 연구원
+        caption: 2023.03.02. - 2025.03.31.
         sub_items:
-          - layout: left
-            title: 흠..
-            sub_title: 팀 프로젝트
-            caption: 2026.06.22. - 2026.07.25.(5명)
-            additional_links:
-              - title: github.com/minmings111/Kyro-jungle-final
-                icon: fab fa-github
-                url: https://github.com/minmings111/Kyro-jungle-final
-            quote: >
-              좀 더 포괄적인 설명
+          - layout: sub-left
+            title: 해양 생태팀
+            sub_title: 연구원
+            # caption: 2026.06.22. - 2026.07.25.(5명)
+            # additional_links:
+            #   - title: github.com/minmings111/Kyro-jungle-final
+            #     icon: fab fa-github
+            #     url: https://github.com/minmings111/Kyro-jungle-final
+            # quote: >
+            #   좀 더 포괄적인 설명
             description: | # this will include new lines to allow paragraphs
-              1. 플랑크톤 분석하기
-              2. 해조류도 봣음
+              1. 현장 조사
+              2. 동물플랑크톤, 해조류 시료 분석 및 보고서 작성
+              3. 수산 생물 생리 및 배양 시험
+              4. DNA sequence 및 계통 분석
 
   - title: Education
     layout: list # Type of content section (list/text)
