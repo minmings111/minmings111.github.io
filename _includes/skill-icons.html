@@ -1,16 +1,18 @@
 {%- if include.icons -%}
   <ul class="skill-icons">
     {%- for skill in include.icons -%}
-      <li class="skill-icon-item">
+      <li class="skill-icon-item{% if skill.label %} skill-icon-label-item{% endif %}">
         {%- if skill.url -%}
           <a href="{{ skill.url }}" target="_blank" rel="noopener"{% if skill.title %} title="{{ skill.title | escape }}" aria-label="{{ skill.title | escape }}"{% endif %}>
         {%- else -%}
           <span{% if skill.title %} title="{{ skill.title | escape }}" aria-label="{{ skill.title | escape }}"{% endif %}>
         {%- endif -%}
           {%- if skill.image -%}
-            <img src="{{ skill.image | relative_url }}" alt="{{ skill.alt | default: skill.title | escape }}" loading="lazy">
+            <img{% if skill.preserve_color %} class="skill-icon-preserve-color"{% endif %} src="{{ skill.image | relative_url }}?v={{ site.time | date: '%s' }}" alt="{{ skill.alt | default: skill.title | escape }}" loading="lazy">
           {%- elsif skill.icon -%}
             <i class="{{ skill.icon }}" aria-hidden="true"></i>
+          {%- elsif skill.label -%}
+            <span class="skill-icon-text">{{ skill.label }}</span>
           {%- elsif skill.title -%}
             <span class="skill-icon-text">{{ skill.title }}</span>
           {%- endif -%}

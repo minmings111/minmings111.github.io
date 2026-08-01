@@ -113,6 +113,27 @@ content:
               - title: github.com/minmings111/RepoPilot
                 icon: fab fa-github
                 url: https://github.com/minmings111/RepoPilot
+            skill_icons:
+              - title: React
+                image: images/skills/react.svg
+              - title: Vite
+                image: images/skills/vite.svg
+              - title: FastAPI
+                image: images/skills/fastapi.svg
+              - title: SQLAlchemy
+                image: images/skills/sqlalchemy.svg
+              - title: PostgreSQL
+                image: images/skills/postgresql.svg
+              - title: ChromaDB
+                image: images/skills/chromadb.ico
+              - title: LangChain
+                image: images/skills/langchain.svg
+              - title: LangGraph
+                image: images/skills/langgraph.svg
+              - title: OpenAI API
+                image: images/skills/openai.svg
+              - title: Docker
+                image: images/skills/docker.svg
             quote: >
               GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
@@ -131,6 +152,17 @@ content:
               - title: github.com/Jungle-12-303/week09-team-05-pintos-threads
                 icon: fab fa-github
                 url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
+            skill_icons:
+              - title: C
+                image: images/skills/c.svg
+              - title: PintOS
+                label: OS
+              - title: x86-64
+                label: x64
+              - title: QEMU
+                image: images/skills/qemu.svg
+              - title: GDB
+                image: images/skills/gnu.svg
             quote: >
               교육용 OS 커널 구현 프로젝트
             description: | # this will include new lines to allow paragraphs
@@ -152,6 +184,23 @@ content:
               - title: https://github.com/minmings111/MEDI_Backend_aica
                 icon: fab fa-github
                 url: https://github.com/minmings111/MEDI_Backend_aica
+            skill_icons:
+              - title: Java 17
+                image: images/skills/java.svg
+              - title: Spring Boot
+                image: images/skills/springboot.svg
+              - title: Spring Security
+                image: images/skills/springsecurity.svg
+              - title: MyBatis
+                image: images/skills/mybatis.svg
+              - title: MySQL
+                image: images/skills/mysql.svg
+              - title: Redis
+                image: images/skills/redis.svg
+              - title: Gradle
+                image: images/skills/gradle.svg
+              - title: Docker
+                image: images/skills/docker.svg
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
@@ -175,6 +224,17 @@ content:
             #     url: https://github.com/minmings111/Kyro-jungle-final
             # quote: >
             #   좀 더 포괄적인 설명
+            skill_icons:
+              - title: RStudio
+                image: images/skills/rstudioide.svg
+              - title: MEGA
+                image: images/skills/mega.png
+              - title: FinchTV
+                image: images/skills/finchtv.png
+              - title: Surfer
+                image: images/skills/surfer.png
+              - title: PRIMER
+                image: images/skills/primer.png
             description: | # this will include new lines to allow paragraphs
               1. 현장 조사
               2. 동물플랑크톤, 해조류 시료 분석 및 보고서 작성

@@ -191,6 +191,13 @@ mark {
   width: 16px;
 }
 
+.skill-icon-label-item,
+.skill-icon-label-item > a,
+.skill-icon-label-item > span {
+  min-width: 16px;
+  width: auto;
+}
+
 .skill-icon-item i {
   color: inherit;
   font-size: 16px;
@@ -199,17 +206,22 @@ mark {
 
 .skill-icon-item img {
   display: block;
-  filter: brightness(0) invert(1);
+  filter: none;
   height: 16px;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   object-fit: contain;
-  opacity: 0.95;
+  opacity: 1;
   width: 16px;
+}
+
+.skill-icon-item img.skill-icon-preserve-color {
+  filter: none;
+  mix-blend-mode: normal;
 }
 
 .skill-icon-text {
   color: inherit;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 700;
   line-height: 1;
 }
