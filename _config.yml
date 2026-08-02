@@ -110,7 +110,7 @@ content:
                     - Kubernetes: metadata
                   - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
                   - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
-                  - Kubernetes 설정 의존성 분석 시, Secret 데이터의 원문 노출을 차단하고 리소스 참조 정보만 응답하도록 처리
+                  - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
               - sub_title: 기술
                 description: |
                   - Backend: Python, FastAPI, PostgreSQL
