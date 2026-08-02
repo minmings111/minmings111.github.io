@@ -169,9 +169,9 @@ content:
             caption: 2026.05.23. - 2026.06.03. / (5명)
             links:
               - title: MNIST Lab
-                url: https://github.com/Jungle-12-303/week13-team-07-mnist-lab
+                url: https://github.com/minmings111/week13-team-07-mnist-lab
               - title: GPT Lab
-                url: https://github.com/Jungle-12-303/week14-team-07-gpt-lab
+                url: https://github.com/minmings111/week14-team-07-gpt-lab
             quote: >
               딥러닝 모델의 학습 과정과 Transformer 기반 언어 모델 구조를 직접 실습하며 성능 분석한 프로젝트
             description: | # this will include new lines to allow paragraphs
@@ -191,16 +191,16 @@ content:
             caption: 2026.04.24. - 2026.05.21. / (4명)
             links:
               - title: PintOS Threads
-                url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
+                url: https://github.com/minmings111/week09-team-05-pintos-threads
               - title: PintOS VM
-                url: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
+                url: https://github.com/minmings111/week11-team-02-pintos-vm
             # additional_links:
-            #   - title: github.com/Jungle-12-303/week11-team-02-pintos-vm
+            #   - title: github.com/minmings111/week11-team-02-pintos-vm
             #     icon: fab fa-github
-            #     url: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
-            #   - title: github.com/Jungle-12-303/week09-team-05-pintos-threads
+            #     url: https://github.com/minmings111/week11-team-02-pintos-vm
+            #   - title: github.com/minmings111/week09-team-05-pintos-threads
             #     icon: fab fa-github
-            #     url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
+            #     url: https://github.com/minmings111/week09-team-05-pintos-threads
             # skill_icons:
             #   - title: C
             #     image: images/skills/c.svg
