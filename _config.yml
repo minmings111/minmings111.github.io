@@ -104,8 +104,10 @@ content:
               - sub_title: 역할
                 description: | # this will include new lines to allow paragraphs
                   - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
-                    "- Prometheus : metrics " "- Loki : logs "
-                    "- Tempo : traces " "- Kubernetes : metadata "
+                    - Prometheus: metrics
+                    - Loki: logs
+                    - Tempo: traces
+                    - Kubernetes: metadata
                   - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
                   - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
                   - ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
