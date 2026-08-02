@@ -105,7 +105,7 @@ content:
                 description: | # this will include new lines to allow paragraphs
                   - Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
                   - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
-                  - 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
+                  - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
                   - ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
               - sub_title: 기술
                 description: |
