@@ -238,9 +238,10 @@ mark {
 }
 
 .source-link-options {
-  background: #222222;
-  border: 1px solid #666666;
+  background: #ffffff;
+  border: 1px solid #cccccc;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  color: #222222;
   display: block;
   min-width: 160px;
   opacity: 0;
@@ -264,7 +265,6 @@ mark {
 }
 
 .source-link-option {
-  color: inherit;
   display: block;
   font-size: 14px;
   line-height: 1.35;
@@ -272,10 +272,31 @@ mark {
   text-decoration: none;
 }
 
+.source-link-options .source-link-option {
+  color: #222222 !important;
+  -webkit-text-fill-color: #222222 !important;
+}
+
 .source-link-option:hover,
 .source-link-option:focus {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.06);
   text-decoration: underline;
+}
+
+.dark .source-link-options {
+  background: #222222;
+  border-color: #666666;
+  color: #e6e6e6;
+}
+
+.dark .source-link-options .source-link-option {
+  color: #e6e6e6 !important;
+  -webkit-text-fill-color: #e6e6e6 !important;
+}
+
+.dark .source-link-option:hover,
+.dark .source-link-option:focus {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nested-list-item.nested-layout-top-left .nested-list-link .link {

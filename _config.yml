@@ -334,7 +334,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           - 석사 조기졸업
           - 학점 4.2/4.5
-          - "졸업논문 - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교: 요각류 중심으로"
+          - 졸업논문 - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교: 요각류 중심으로
       - layout: left
         title: 전남대학교
         sub_title: 환경해양학과
