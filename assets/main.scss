@@ -49,6 +49,10 @@ mark {
   box-shadow: none;
 }
 
+.intro-container h3 {
+  margin-bottom: 24px;
+}
+
 .intro-container > .row.clearfix {
   align-items: center;
   display: flex;
@@ -62,6 +66,15 @@ mark {
 
 .intro-container > .row.clearfix > [class*="col-"] {
   float: none;
+}
+
+.intro-container .profile-img,
+.intro-container p {
+  margin-bottom: 0;
+}
+
+.intro-container + .list-container {
+  margin-top: 16px;
 }
 
 .nested-content {
@@ -94,7 +107,11 @@ mark {
 }
 
 .layout-has-group-divider {
-  border-bottom: 1px solid #cccccc;
+  background-image: linear-gradient(to right, #cccccc, #cccccc);
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 30px) 1px;
+  border-bottom: 0;
   padding-bottom: 28px;
 }
 
@@ -104,7 +121,11 @@ mark {
 }
 
 .nested-content-has-divider {
-  border-bottom: 1px solid #cccccc;
+  background-image: linear-gradient(to right, #cccccc, #cccccc);
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 30px) 1px;
+  border-bottom: 0;
 }
 
 .nested-list-item.nested-layout-sub-left {
@@ -137,20 +158,60 @@ mark {
   text-align: left;
 }
 
+.nested-list-item.nested-layout-top-left > .nested-list-details {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-heading {
+  padding-right: 430px;
+}
+
 .nested-list-item.nested-layout-top-left .nested-list-heading h4 {
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .nested-list-item.nested-layout-top-left .nested-list-quote {
-  margin-top: 10px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0 0 10px;
+  padding: 0;
   text-align: left;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-meta {
+  margin-bottom: 0;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-meta p {
+  line-height: 1.45;
+  margin: 0;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-meta p:last-child {
+  margin-bottom: 0;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-link {
+  max-width: 400px;
+  position: absolute;
+  right: 15px;
+  text-align: right;
+  top: 0;
+  white-space: nowrap;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-link .link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .nested-list-item.nested-layout-top-left .skill-icons {
   justify-content: flex-start;
+}
+
+.nested-list-item.nested-layout-top-left .nested-list-body ul {
+  margin-top: 0;
 }
 
 .nested-list-item + .nested-list-item {
@@ -258,6 +319,23 @@ mark {
   font-size: 8px;
   font-weight: 700;
   line-height: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .nested-list-item.nested-layout-top-left .nested-list-heading {
+    padding-right: 0;
+  }
+
+  .nested-list-item.nested-layout-top-left .nested-list-link {
+    max-width: none;
+    position: static;
+    text-align: inherit;
+    white-space: normal;
+  }
+
+  .nested-list-item.nested-layout-top-left .nested-list-link .link {
+    white-space: normal;
+  }
 }
 
 @media screen and (max-width: 767px) {

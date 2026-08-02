@@ -1,10 +1,12 @@
 {% assign nested_item = include.nested_item %}
 {% assign nested_layout = nested_item.layout | default: 'top-middle' %}
 {% assign nested_render_layout = nested_layout %}
+{% assign quote_after_title = false %}
 {% if nested_layout == 'sub-left' %}
   {% assign nested_render_layout = 'left' %}
 {% elsif nested_layout == 'top-left' %}
   {% assign nested_render_layout = 'top' %}
+  {% assign quote_after_title = true %}
 {% endif %}
 
 <article class="row clearfix layout layout-{{ nested_render_layout }} nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
@@ -12,12 +14,15 @@
     <div class="nested-list-heading">
       <h4 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h4>
     </div>
+    {%- if nested_item.quote and quote_after_title -%}
+      <p class="quote nested-list-quote nested-list-title-quote">{{ nested_item.quote }}</p>
+    {%- endif -%}
     {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links or nested_item.skill_icons -%}
       <div class="nested-list-meta">
         {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
         {%- if nested_item.caption -%}<p>{{ nested_item.caption }}</p>{%- endif -%}
         {%- if nested_item.link -%}
-          <p>
+          <p class="nested-list-link">
             {% include a.html href=nested_item.link class="link" %}
               {%- if nested_item.link_text -%}{{ nested_item.link_text }}{%- else -%}{{ nested_item.link }}{%- endif -%}
             </a>
@@ -40,7 +45,9 @@
   </div>
   <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content nested-list-content">
     {%- if nested_item.quote -%}
-      <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
+      {%- unless quote_after_title -%}
+        <p class="quote nested-list-quote">{{ nested_item.quote }}</p>
+      {%- endunless -%}
     {%- endif -%}
     {%- if nested_item.description -%}
       <div class="nested-list-body">

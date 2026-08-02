@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: 이민정
-title: 신입 백엔드 개발자
+title: 신입 데이터 개발자
 email: minmings111@gmail.com
 phone: 010-2159-6367
 # website: www.github.com/minmings111
@@ -52,8 +52,7 @@ additional_links:
 about_title: About Me
 about_profile_image: images/LeeMinJeong_id_photo.png
 about_content: | # this will include new lines to allow paragraphs
-  반복되는 해양 데이터 분석과 업무를 코드를 통해 자동화하는 경험을 계기로, 데이터를 다루는 개발에 관심을 갖게 되었습니다. 현재는 백엔드와 데이터 처리 흐름을 학습하며, 흩어진 데이터를 정제하고 구조화하는 역량을 쌓고 있습니다. 데이터의 수집부터 저장, 활용까지 일관된 흐름을 설계하는 개발자를 목표로 하고 있습니다.<br>
-  <br><br>
+  반복되는 해양 데이터 분석과 업무를 코드를 통해 자동화하는 경험을 계기로, 데이터를 다루는 개발에 관심을 갖게 되었습니다. 최근에는 Kyro 프로젝트를 통해 대량의 실시간 지표, 로그 데이터 수집하는 파이프라인을 설계하고, 구현하며 흩어진 데이터를 정제하고 구조화하는 경험을 하였습니다.<br>
   신뢰할 수 있는 데이터를 기반으로 더 정확한 분석과 가치 있는 서비스를 만드는 개발자가 되겠습니다.
 
 content:
@@ -63,43 +62,44 @@ content:
       - layout: left-top
         title: 크래프톤 정글
         sub_title: 12기 수료
-        caption: 2026.03.02. - 2026.07.30.
+        caption: 2026.03.03. - 2026.07.30.
         sub_items:
           - layout: top-left
             title: Kyro
-            sub_title: 팀 프로젝트(5명)
-            caption: 2026.06.22. - 2026.07.25.
-            additional_links:
-              - title: github.com/minmings111/Kyro-jungle-final
-                icon: fab fa-github
-                url: https://github.com/minmings111/Kyro-jungle-final
-            skill_icons:
-              - title: Kubernetes
-                image: images/skills/kubernetes.svg
-              - title: Python
-                image: images/skills/python.svg
-              - title: FastAPI
-                image: images/skills/fastapi.svg
-              - title: PostgreSQL
-                image: images/skills/postgresql.svg
-              - title: Prometheus
-                image: images/skills/prometheus.svg
-              - title: Loki
-                image: images/skills/loki.svg
-              - title: Tempo
-                image: images/skills/tempo.svg
-              - title: OpenTelemetry
-                image: images/skills/opentelemetry.svg
-              - title: Docker
-                image: images/skills/docker.svg
-              - title: Helm
-                image: images/skills/helm.svg
-              - title: React
-                image: images/skills/react.svg
-              - title: TypeScript
-                image: images/skills/typescript.svg
+            # sub_title: 팀 프로젝트(5명)
+            caption: 2026.06.22. - 2026.07.25. / (5명)
+            link: https://github.com/minmings111/Kyro-jungle-final
+            # additional_links:
+            #   - title: github.com/minmings111/Kyro-jungle-final
+            #     icon: fab fa-github
+            #     url: https://github.com/minmings111/Kyro-jungle-final
+            # skill_icons:
+            #   - title: Kubernetes
+            #     image: images/skills/kubernetes.svg
+            #   - title: Python
+            #     image: images/skills/python.svg
+            #   - title: FastAPI
+            #     image: images/skills/fastapi.svg
+            #   - title: PostgreSQL
+            #     image: images/skills/postgresql.svg
+            #   - title: Prometheus
+            #     image: images/skills/prometheus.svg
+            #   - title: Loki
+            #     image: images/skills/loki.svg
+            #   - title: Tempo
+            #     image: images/skills/tempo.svg
+            #   - title: OpenTelemetry
+            #     image: images/skills/opentelemetry.svg
+            #   - title: Docker
+            #     image: images/skills/docker.svg
+            #   - title: Helm
+            #     image: images/skills/helm.svg
+            #   - title: React
+            #     image: images/skills/react.svg
+            #   - title: TypeScript
+            #     image: images/skills/typescript.svg
             quote: >
-              Kubernetes 장애 분석부터 복구 PR 제안까지 지원하는 AI 운영 플랫폼
+              다중 Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
             description: | # this will include new lines to allow paragraphs
               - Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
               - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
@@ -108,33 +108,34 @@ content:
 
           - layout: top-left
             title: RepoPilot
-            sub_title: 개인 프로젝트
+            # sub_title: 개인 프로젝트
             caption: 2026.06.05. - 2026.06.19.
-            additional_links:
-              - title: github.com/minmings111/RepoPilot
-                icon: fab fa-github
-                url: https://github.com/minmings111/RepoPilot
-            skill_icons:
-              - title: React
-                image: images/skills/react.svg
-              - title: Vite
-                image: images/skills/vite.svg
-              - title: FastAPI
-                image: images/skills/fastapi.svg
-              - title: SQLAlchemy
-                image: images/skills/sqlalchemy.svg
-              - title: PostgreSQL
-                image: images/skills/postgresql.svg
-              - title: ChromaDB
-                image: images/skills/chromadb.ico
-              - title: LangChain
-                image: images/skills/langchain.svg
-              - title: LangGraph
-                image: images/skills/langgraph.svg
-              - title: OpenAI API
-                image: images/skills/openai.svg
-              - title: Docker
-                image: images/skills/docker.svg
+            link: https://github.com/minmings111/RepoPilot
+            # additional_links:
+            #   - title: github.com/minmings111/RepoPilot
+            #     icon: fab fa-github
+            #     url: https://github.com/minmings111/RepoPilot
+            # skill_icons:
+            #   - title: React
+            #     image: images/skills/react.svg
+            #   - title: Vite
+            #     image: images/skills/vite.svg
+            #   - title: FastAPI
+            #     image: images/skills/fastapi.svg
+            #   - title: SQLAlchemy
+            #     image: images/skills/sqlalchemy.svg
+            #   - title: PostgreSQL
+            #     image: images/skills/postgresql.svg
+            #   - title: ChromaDB
+            #     image: images/skills/chromadb.ico
+            #   - title: LangChain
+            #     image: images/skills/langchain.svg
+            #   - title: LangGraph
+            #     image: images/skills/langgraph.svg
+            #   - title: OpenAI API
+            #     image: images/skills/openai.svg
+            #   - title: Docker
+            #     image: images/skills/docker.svg
             quote: >
               GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
@@ -143,27 +144,39 @@ content:
               - Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
 
           - layout: top-left
+            title: MNIST & LLM
+            caption: 2026.05.23. - 2026.06.03. / (5명)
+            link: https://github.com/Jungle-12-303/week13-team-07-mnist-lab
+            quote: >
+              딥러닝 모델의 학습 과정과 Transformer 기반 언어 모델 구조를 직접 실습하며 성능 분석한 프로젝트
+            description: | # this will include new lines to allow paragraphs
+              - BatchNorm·Dropout·Learning Rate·Epoch 조건별 실험을 통해 최고 테스트 정확도 98.68% 달성 및 과적합 분석
+              - BPE Tokenizer, Dataset, Embedding, Attention, TransformerBlock을 구현하며 mini GPT의 핵심 구조 학습
+              - 학습 loss, validation loss, perplexity, 과적합 지표를 기록하며 모델 성능 변화 분석
+
+          - layout: top-left
             title: PintOS
-            sub_title: 팀 프로젝트(4명)
-            caption: 2026.04.24. - 2026.05.21.
-            additional_links:
-              - title: github.com/Jungle-12-303/week11-team-02-pintos-vm
-                icon: fab fa-github
-                url: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
-              - title: github.com/Jungle-12-303/week09-team-05-pintos-threads
-                icon: fab fa-github
-                url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
-            skill_icons:
-              - title: C
-                image: images/skills/c.svg
-              - title: PintOS
-                label: OS
-              - title: x86-64
-                label: x64
-              - title: QEMU
-                image: images/skills/qemu.svg
-              - title: GDB
-                image: images/skills/gnu.svg
+            # sub_title: 팀 프로젝트(4명)
+            caption: 2026.04.24. - 2026.05.21. / (4명)
+            link: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
+            # additional_links:
+            #   - title: github.com/Jungle-12-303/week11-team-02-pintos-vm
+            #     icon: fab fa-github
+            #     url: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
+            #   - title: github.com/Jungle-12-303/week09-team-05-pintos-threads
+            #     icon: fab fa-github
+            #     url: https://github.com/Jungle-12-303/week09-team-05-pintos-threads
+            # skill_icons:
+            #   - title: C
+            #     image: images/skills/c.svg
+            #   - title: PintOS
+            #     label: OS
+            #   - title: x86-64
+            #     label: x64
+            #   - title: QEMU
+            #     image: images/skills/qemu.svg
+            #   - title: GDB
+            #     image: images/skills/gnu.svg
             quote: >
               교육용 OS 커널 구현 프로젝트
             description: | # this will include new lines to allow paragraphs
@@ -179,29 +192,30 @@ content:
         sub_items:
           - layout: top-left
             title: Medi
-            sub_title: 팀 프로젝트(5명)
-            caption: 2026.10.17. - 2026.12.07.
-            additional_links:
-              - title: https://github.com/minmings111/MEDI_Backend_aica
-                icon: fab fa-github
-                url: https://github.com/minmings111/MEDI_Backend_aica
-            skill_icons:
-              - title: Java 17
-                image: images/skills/java.svg
-              - title: Spring Boot
-                image: images/skills/springboot.svg
-              - title: Spring Security
-                image: images/skills/springsecurity.svg
-              - title: MyBatis
-                image: images/skills/mybatis.svg
-              - title: MySQL
-                image: images/skills/mysql.svg
-              - title: Redis
-                image: images/skills/redis.svg
-              - title: Gradle
-                image: images/skills/gradle.svg
-              - title: Docker
-                image: images/skills/docker.svg
+            # sub_title: 팀 프로젝트(5명)
+            caption: 2026.10.17. - 2026.12.07. / (5명)
+            link: https://github.com/minmings111/MEDI_Backend_aica
+            # additional_links:
+            #   - title: https://github.com/minmings111/MEDI_Backend_aica
+            #     icon: fab fa-github
+            #     url: https://github.com/minmings111/MEDI_Backend_aica
+            # skill_icons:
+            #   - title: Java 17
+            #     image: images/skills/java.svg
+            #   - title: Spring Boot
+            #     image: images/skills/springboot.svg
+            #   - title: Spring Security
+            #     image: images/skills/springsecurity.svg
+            #   - title: MyBatis
+            #     image: images/skills/mybatis.svg
+            #   - title: MySQL
+            #     image: images/skills/mysql.svg
+            #   - title: Redis
+            #     image: images/skills/redis.svg
+            #   - title: Gradle
+            #     image: images/skills/gradle.svg
+            #   - title: Docker
+            #     image: images/skills/docker.svg
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
@@ -225,17 +239,17 @@ content:
             #     url: https://github.com/minmings111/Kyro-jungle-final
             # quote: >
             #   좀 더 포괄적인 설명
-            skill_icons:
-              - title: RStudio
-                image: images/skills/rstudioide.svg
-              - title: MEGA
-                image: images/skills/mega.png
-              - title: FinchTV
-                image: images/skills/finchtv.png
-              - title: Surfer
-                image: images/skills/surfer.png
-              - title: PRIMER
-                image: images/skills/primer.png
+            # skill_icons:
+            #   - title: RStudio
+            #     image: images/skills/rstudioide.svg
+            #   - title: MEGA
+            #     image: images/skills/mega.png
+            #   - title: FinchTV
+            #     image: images/skills/finchtv.png
+            #   - title: Surfer
+            #     image: images/skills/surfer.png
+            #   - title: PRIMER
+            #     image: images/skills/primer.png
             description: | # this will include new lines to allow paragraphs
               - 현장 조사
               - 동물플랑크톤, 해조류 시료 분석 및 결과 보고서 작성
@@ -251,8 +265,16 @@ content:
         sub_title: 환경해양학과
         caption: 2021.09. - 2023.02.
         description: | # this will include new lines to allow paragraphs
-          - 이공계 석사 졸업
+          - 석사 조기졸업
+          - 학점 4.2/4.5
           - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교<br>: 요각류 중심으로
+      - layout: left
+        title: 전남대학교
+        sub_title: 환경해양학과
+        caption: 2018.03. - 2021.08.
+        description: | # this will include new lines to allow paragraphs
+          - 학부 조기졸업
+          - 학점 3.95/4.5
 
   # - title: A Little More About Me
   #   layout: text
