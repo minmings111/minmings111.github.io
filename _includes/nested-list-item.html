@@ -20,7 +20,7 @@
     {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.links or nested_item.additional_links or nested_item.skill_icons -%}
       <div class="nested-list-meta">
         {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
-        {%- if nested_item.caption -%}<p>{{ nested_item.caption }}</p>{%- endif -%}
+        {%- if nested_item.caption -%}<p class="caption">{{ nested_item.caption }}</p>{%- endif -%}
         {% include visible-links.html link=nested_item.link link_text=nested_item.link_text links=nested_item.links class_name="nested-list-link" %}
         {%- if nested_item.additional_links -%}
           <p class="no-print aditional-links">

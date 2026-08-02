@@ -99,15 +99,12 @@ content:
             #   - title: TypeScript
             #     image: images/skills/typescript.svg
             quote: >
-              다중 Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
+              다중 Kubernetes Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
             blocks:
               - sub_title: 역할
                 description: | # this will include new lines to allow paragraphs
                   - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
-                    - Prometheus: metrics
-                    - Loki: logs
-                    - Tempo: traces
-                    - Kubernetes: metadata
+                    - Prometheus(지표 수집 및 저장) | Loki(로그 수집 및 저장) | Tempo(traces 저장)
                   - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
                   - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
                   - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
@@ -152,9 +149,9 @@ content:
             blocks:
               - sub_title: 역할
                 description: | # this will include new lines to allow paragraphs
+                  - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
                   - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
                   - 개발자가 작업 일정·회의록 등의 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
-                  - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
               - sub_title: 기술
                 description: |
                   - Backend / DB: Python, FastAPI, SQLAlchemy, PostgreSQL
@@ -162,7 +159,7 @@ content:
                   - AI / Infra: OpenAI API, LangChain, LangGraph, ChromaDB, Docker
 
           - layout: top-left
-            title: MNIST & LLM
+            title: 신경망 & mini-GPT
             caption: 2026.05.23. - 2026.06.03. / (5명)
             links:
               - https://github.com/Jungle-12-303/week13-team-07-mnist-lab
@@ -308,7 +305,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           - 석사 조기졸업
           - 학점 4.2/4.5
-          - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교<br>: 요각류 중심으로
+          - 졸업논문 : 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교<br>: 요각류 중심으로
       - layout: left
         title: 전남대학교
         sub_title: 환경해양학과

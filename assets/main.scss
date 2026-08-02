@@ -37,6 +37,14 @@ p.quote {
   line-height: 1.6;
 }
 
+p.quote {
+  font-style: normal;
+}
+
+p.caption {
+  font-style: italic;
+}
+
 mark {
   font-size: inherit;
 }

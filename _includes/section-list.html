@@ -22,7 +22,7 @@
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4 id="{{ entry.title | slugify }}">{{ entry.title }}</h4>
       {%- if entry.sub_title -%}<p><b>{{ entry.sub_title }}</b></p>{%- endif -%}
-      {%- if entry.caption -%}<p>{{ entry.caption }}</p>{%- endif -%}
+      {%- if entry.caption -%}<p class="caption">{{ entry.caption }}</p>{%- endif -%}
 
       {% include visible-links.html link=entry.link link_text=entry.link_text links=entry.links class_name="entry-list-link" %}
 
