@@ -47,6 +47,7 @@
         {{ entry.description | strip | markdownify }}
       {%- endif -%}
       {% include content-blocks.html blocks=entry.blocks %}
+      {% include tag-list.html tags=entry.tags %}
       {%- if has_regular_sub_items -%}
         <div class="nested-content">
           {% for nested_entry in entry.sub_items %}

@@ -100,19 +100,25 @@ content:
             #     image: images/skills/typescript.svg
             quote: >
               다중 Kubernetes Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
-            blocks:
-              - sub_title: 역할
-                description: | # this will include new lines to allow paragraphs
-                  - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
-                    - Prometheus(지표 수집 및 저장) | Loki(로그 수집 및 저장) | Tempo(traces 저장)
-                  - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
-                  - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
-                  - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
-              - sub_title: 기술
-                description: |
-                  - Backend: Python, FastAPI, PostgreSQL
-                  - Frontend: React, TypeScript
-                  - DevOps / Observability: Kubernetes, Docker, Helm, Prometheus, Loki, Tempo, OpenTelemetry
+            description: | # this will include new lines to allow paragraphs
+              - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
+                - Prometheus(지표 수집 및 저장) &#124; Loki(로그 수집 및 저장) &#124; Tempo(traces 저장)
+              - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
+              - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
+              - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
+            tags:
+              - Python
+              - FastAPI
+              - PostgreSQL
+              - React
+              - TypeScript
+              - Kubernetes
+              - Docker
+              - Helm
+              - Prometheus
+              - Loki
+              - Tempo
+              - OpenTelemetry
 
           - layout: top-left
             title: RepoPilot
@@ -146,17 +152,23 @@ content:
             #     image: images/skills/docker.svg
             quote: >
               GitHub로 협업하는 개발자를 위한 일정·문서 관리 및 AI 코드 질의응답 서비스
-            blocks:
-              - sub_title: 역할
-                description: | # this will include new lines to allow paragraphs
-                  - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
-                  - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
-                  - 개발자가 작업 일정·회의록 등의 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
-              - sub_title: 기술
-                description: |
-                  - Backend / DB: Python, FastAPI, SQLAlchemy, PostgreSQL
-                  - Frontend: React, Vite, JavaScript
-                  - AI / Infra: OpenAI API, LangChain, LangGraph, ChromaDB, Docker
+            description: | # this will include new lines to allow paragraphs
+              - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+              - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
+              - 개발자가 작업 일정·회의록 등의 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
+            tags:
+              - Python
+              - FastAPI
+              - SQLAlchemy
+              - PostgreSQL
+              - React
+              - Vite
+              - JavaScript
+              - OpenAI API
+              - LangChain
+              - LangGraph
+              - ChromaDB
+              - Docker
 
           - layout: top-left
             title: 신경망 & mini-GPT
@@ -166,16 +178,16 @@ content:
               - https://github.com/Jungle-12-303/week14-team-07-gpt-lab.git
             quote: >
               딥러닝 모델의 학습 과정과 Transformer 기반 언어 모델 구조를 직접 실습하며 성능 분석한 프로젝트
-            blocks:
-              - sub_title: 역할
-                description: | # this will include new lines to allow paragraphs
-                  - BatchNorm·Dropout·Learning Rate·Epoch 조건별 실험을 통해 최고 테스트 정확도 98.68% 달성 및 과적합 분석
-                  - BPE Tokenizer, Dataset, Embedding, Attention, TransformerBlock을 구현하며 mini GPT의 핵심 구조 학습
-                  - 학습 loss, validation loss, perplexity, 과적합 지표를 기록하며 모델 성능 변화 분석
-              - sub_title: 기술
-                description: |
-                  - ML / Deep Learning: Python, NumPy, PyTorch
-                  - Experiment / Visualization: Jupyter Notebook, Matplotlib
+            description: | # this will include new lines to allow paragraphs
+              - BatchNorm·Dropout·Learning Rate·Epoch 조건별 실험을 통해 최고 테스트 정확도 98.68% 달성 및 과적합 분석
+              - BPE Tokenizer, Dataset, Embedding, Attention, TransformerBlock을 구현하며 mini GPT의 핵심 구조 학습
+              - 학습 loss, validation loss, perplexity, 과적합 지표를 기록하며 모델 성능 변화 분석
+            tags:
+              - Python
+              - NumPy
+              - PyTorch
+              - Jupyter Notebook
+              - Matplotlib
 
           - layout: top-left
             title: PintOS
@@ -204,17 +216,17 @@ content:
             #     image: images/skills/gnu.svg
             quote: >
               교육용 OS 커널 구현 프로젝트
-            blocks:
-              - sub_title: 역할
-                description: | # this will include new lines to allow paragraphs
-                  - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
-                  - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
-                  - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
-                  - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
-              - sub_title: 기술
-                description: |
-                  - Language / Environment: C, PintOS, x86-64
-                  - Debugging: QEMU, GDB
+            description: | # this will include new lines to allow paragraphs
+              - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
+              - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
+              - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
+              - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
+            tags:
+              - C
+              - PintOS
+              - x86-64
+              - QEMU
+              - GDB
 
       - layout: left-top
         title: 인공지능사관학교
@@ -249,18 +261,31 @@ content:
             #     image: images/skills/docker.svg
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
-            blocks:
-              - sub_title: 역할
-                description: | # this will include new lines to allow paragraphs
-                  - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
-                  - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
-                  - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
-                  - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
-              - sub_title: 기술
-                description: |
-                  - Backend / DB: Java 17, Spring Boot, Spring Security, MyBatis, MySQL, Redis
-                  - Frontend: Next.js, React, JavaScript, Redux Toolkit, Tailwind CSS, Recharts
-                  - AI / Infra: Python, FastAPI, LangChain, LangGraph, OpenAI API, Docker, GitHub Actions
+            description: | # this will include new lines to allow paragraphs
+              - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
+              - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
+              - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
+              - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
+            tags:
+              - Java 17
+              - Spring Boot
+              - Spring Security
+              - MyBatis
+              - MySQL
+              - Redis
+              - Next.js
+              - React
+              - JavaScript
+              - Redux Toolkit
+              - Tailwind CSS
+              - Recharts
+              - Python
+              - FastAPI
+              - LangChain
+              - LangGraph
+              - OpenAI API
+              - Docker
+              - GitHub Actions
 
       - layout: left-top
         title: 바다생태연구소
@@ -305,7 +330,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           - 석사 조기졸업
           - 학점 4.2/4.5
-          - 졸업논문 : 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교<br>: 요각류 중심으로
+          - "졸업논문 - 네트 망목 크기(150, 200 ㎛)에 따른 동물플랑크톤의 다양성 및 출현 개체수 차이 비교: 요각류 중심으로"
       - layout: left
         title: 전남대학교
         sub_title: 환경해양학과

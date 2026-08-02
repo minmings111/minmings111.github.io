@@ -49,6 +49,7 @@
       </div>
     {%- endif -%}
     {% include content-blocks.html blocks=nested_item.blocks class_name="nested-list-blocks" %}
+    {% include tag-list.html tags=nested_item.tags class_name="project-tags" %}
     {%- if nested_item.sub_items -%}
       <div class="nested-content">
         {% for child_entry in nested_item.sub_items %}

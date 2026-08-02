@@ -1,0 +1,8 @@
+{%- if include.tags -%}
+  <ul class="tag-list{% if include.class_name %} {{ include.class_name }}{% endif %}">
+    {%- for tag_item in include.tags -%}
+      {%- assign tag_label = tag_item.title | default: tag_item.name | default: tag_item -%}
+      <li>{{ tag_label }}</li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

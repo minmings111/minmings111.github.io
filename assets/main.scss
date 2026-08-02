@@ -269,11 +269,26 @@ mark {
   font-size: 16px;
 }
 
+.nested-list-body > ul > li > ul,
 .content-block-body > ul > li > ul {
-  display: grid;
-  gap: 0 24px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0 0 12px;
+  display: block;
+  list-style: none;
+  margin: 2px 0 12px;
+  padding-left: 18px;
+}
+
+.nested-list-body > ul > li > ul > li,
+.content-block-body > ul > li > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nested-list-body > ul > li > ul > li::before,
+.content-block-body > ul > li > ul > li::before {
+  content: "↳";
+  left: -18px;
+  position: absolute;
+  top: 0;
 }
 
 .content-block + .content-block {
@@ -289,8 +304,39 @@ mark {
   margin-top: 0;
 }
 
+.nested-list-body ul ul,
+.content-block-body ul ul {
+  list-style: none;
+  margin-top: 2px;
+  padding-left: 18px;
+}
+
 .content-block-body li {
   font-size: 16px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.tag-list li {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.tag-list li::before {
+  color: #45a276;
+  content: "#";
+  margin-right: 2px;
 }
 
 .skill-icons {
