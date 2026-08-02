@@ -223,8 +223,8 @@ content:
             description: | # this will include new lines to allow paragraphs
               - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
               - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
-              - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
-              - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
+              - SPT와 Lazy Loading 구현으로 Page Fault 시점에 필요한 페이지 로딩
+              - Swap In/Out과 Clock 기반 Frame Eviction 구현으로 메모리 부족 상황 대응
             tags:
               - C
               - PintOS
