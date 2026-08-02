@@ -176,8 +176,14 @@ mark {
 }
 
 .nested-list-item.nested-layout-top-left .nested-list-heading h4 {
+  background-color: rgba(181, 230, 170, 0.28);
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
   font-size: 30px;
   margin-bottom: 0;
+  padding: 0 5px 1px;
 }
 
 .nested-list-item.nested-layout-top-left .nested-list-quote {

@@ -102,7 +102,7 @@ content:
               다중 Kubernetes Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
             description: | # this will include new lines to allow paragraphs
               - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
-                - Prometheus(지표 수집 및 저장) &#124; Loki(로그 수집 및 저장) &#124; Tempo(traces 저장)
+                - Prometheus(지표 수집 및 저장) &#124; Loki(로그 저장) &#124; Tempo(traces 저장)
               - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
               - metric series edge sampling과 trace compaction으로 장애 전후 근거를 보존하며 1MiB payload 계약 내 대용량 관측 데이터 전달 안정화
               - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
@@ -153,7 +153,7 @@ content:
             quote: >
               GitHub로 협업하는 개발자를 위한 일정·문서 관리 및 AI 코드 질의응답 서비스
             description: | # this will include new lines to allow paragraphs
-              - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+              - RAG 검색 및 AI Agent 응답 API를 구현하여 GitHub 저장소의 코드·문서 기반 질의응답 지원
               - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
               - 개발자가 작업 일정·회의록 등의 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
             tags:
@@ -266,10 +266,10 @@ content:
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
             description: | # this will include new lines to allow paragraphs
-              - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
-              - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
-              - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
               - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
+              - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
+              - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
+              - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
             tags:
               - Java 17
               - Spring Boot
