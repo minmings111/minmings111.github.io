@@ -115,10 +115,6 @@ content:
               - Kubernetes
               - Docker
               - Helm
-              - Prometheus
-              - Loki
-              - Tempo
-              - OpenTelemetry
 
           - layout: top-left
             title: RepoPilot
@@ -164,11 +160,9 @@ content:
               - React
               - Vite
               - JavaScript
-              - OpenAI API
               - LangChain
               - LangGraph
               - ChromaDB
-              - Docker
 
           - layout: top-left
             title: 신경망 & mini-GPT
@@ -273,23 +267,15 @@ content:
             tags:
               - Java 17
               - Spring Boot
-              - Spring Security
-              - MyBatis
               - MySQL
               - Redis
               - Next.js
               - React
               - JavaScript
-              - Redux Toolkit
-              - Tailwind CSS
-              - Recharts
               - Python
               - FastAPI
               - LangChain
               - LangGraph
-              - OpenAI API
-              - Docker
-              - GitHub Actions
 
       - layout: left-top
         title: 바다생태연구소
