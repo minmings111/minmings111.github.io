@@ -104,7 +104,7 @@ content:
               - Kubernetes 내 실시간 지표, 로그 등 관측 데이터(CPU, 메모리, POD 상태 등) 수집, 분석, 가시화 파이프라인 구축
                 - Prometheus(지표 수집 및 저장) &#124; Loki(로그 저장) &#124; Tempo(traces 저장)
               - Provider 실패와 no signal을 분리하는 상태 판별 로직으로 장애 분석용 evidence 정합성 확보
-              - 장애 전후의 핵심 metric과 trace 데이터를 선별·축약하여, 1MiB 제한 내에서도 분석 근거가 유실되지 않도록 전달 안정성 개선
+              - 장애 전후의 핵심 metric과 trace 데이터를 선별·축약하여, 1MiB 제한 내 분석 근거가 유실되지 않도록 전달 안정성 개선
               - Kubernetes 설정 의존성 분석 시, Secret의 원문은 응답에서 제외하고 리소스 참조 정보만 제공하도록 구현
             tags:
               - Python
