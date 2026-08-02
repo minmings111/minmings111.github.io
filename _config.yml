@@ -153,7 +153,7 @@ content:
               - sub_title: 역할
                 description: | # this will include new lines to allow paragraphs
                   - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
-                  - 개발자가 작업 일정·회의록·진행 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
+                  - 개발자가 작업 일정·회의록 등의 게시글을 한 화면에서 관리할 수 있도록 Board/Calendar CRUD와 React 대시보드 연동 구현
                   - GitHub 저장소의 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
               - sub_title: 기술
                 description: |
