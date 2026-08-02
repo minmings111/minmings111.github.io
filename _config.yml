@@ -252,11 +252,18 @@ content:
             #     image: images/skills/docker.svg
             quote: >
               YouTube 크리에이터용 AI 댓글 필터링 및 채널 관리
-            description: | # this will include new lines to allow paragraphs
-              - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
-              - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
-              - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
-              - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
+            blocks:
+              - sub_title: 역할
+                description: | # this will include new lines to allow paragraphs
+                  - 결제·구독 및 결제수단 API 구현으로 사용자별 구독 관리 흐름 구축
+                  - 대시보드 통계 API 구현으로 필터링 현황, 랭킹, 기간별 추이 조회 지원
+                  - YouTube 댓글·자막 Redis 동기화로 AI 분석 데이터 수집 과정 자동화
+                  - AI 필터링 결과 저장·조회 API 연동으로 분석 결과의 서비스 내 활용 기반 마련
+              - sub_title: 기술
+                description: |
+                  - Backend / DB: Java 17, Spring Boot, Spring Security, MyBatis, MySQL, Redis
+                  - Frontend: Next.js, React, JavaScript, Redux Toolkit, Tailwind CSS, Recharts
+                  - AI / Infra: Python, FastAPI, LangChain, LangGraph, OpenAI API, Docker, GitHub Actions
 
       - layout: left-top
         title: 바다생태연구소
