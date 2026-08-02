@@ -1,0 +1,53 @@
+{%- assign link_class = include.class_name | default: 'visible-links' -%}
+{%- if include.link or include.links -%}
+  <p class="{{ link_class }}">
+    {%- if include.link -%}
+      {%- assign single_link_label = include.link_text | default: include.link -%}
+      {%- unless include.link_text -%}
+        {%- assign single_link_label = single_link_label | remove_first: 'https://' | remove_first: 'http://' -%}
+        {%- assign single_link_label_size = single_link_label | size -%}
+        {%- assign single_link_label_suffix_start = single_link_label_size | minus: 4 -%}
+        {%- assign single_link_label_suffix = single_link_label | slice: single_link_label_suffix_start, 4 -%}
+        {%- if single_link_label_suffix == '.git' -%}
+          {%- assign single_link_label = single_link_label | slice: 0, single_link_label_suffix_start -%}
+        {%- endif -%}
+      {%- endunless -%}
+      <span class="visible-link-item">
+        {% include a.html href=include.link class="link" %}
+          {{- single_link_label -}}
+        </a>
+      </span>
+    {%- endif -%}
+    {%- if include.links -%}
+      {%- for link_item in include.links -%}
+        {%- if link_item.url -%}
+          {%- assign link_href = link_item.url -%}
+          {%- assign link_label = link_item.text | default: link_item.title | default: link_item.url -%}
+          {%- unless link_item.text or link_item.title -%}
+            {%- assign link_label = link_label | remove_first: 'https://' | remove_first: 'http://' -%}
+            {%- assign link_label_size = link_label | size -%}
+            {%- assign link_label_suffix_start = link_label_size | minus: 4 -%}
+            {%- assign link_label_suffix = link_label | slice: link_label_suffix_start, 4 -%}
+            {%- if link_label_suffix == '.git' -%}
+              {%- assign link_label = link_label | slice: 0, link_label_suffix_start -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- else -%}
+          {%- assign link_href = link_item -%}
+          {%- assign link_label = link_item | remove_first: 'https://' | remove_first: 'http://' -%}
+          {%- assign link_label_size = link_label | size -%}
+          {%- assign link_label_suffix_start = link_label_size | minus: 4 -%}
+          {%- assign link_label_suffix = link_label | slice: link_label_suffix_start, 4 -%}
+          {%- if link_label_suffix == '.git' -%}
+            {%- assign link_label = link_label | slice: 0, link_label_suffix_start -%}
+          {%- endif -%}
+        {%- endif -%}
+        <span class="visible-link-item">
+          {% include a.html href=link_href class="link" %}
+            {{- link_label -}}
+          </a>
+        </span>
+      {%- endfor -%}
+    {%- endif -%}
+  </p>
+{%- endif -%}

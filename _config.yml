@@ -100,11 +100,18 @@ content:
             #     image: images/skills/typescript.svg
             quote: >
               다중 Cluster의 운영 관리, 모니터링, 장애분석과 대응까지 지원하는 AI 운영 플랫폼
-            description: | # this will include new lines to allow paragraphs
-              - Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
-              - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
-              - 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
-              - ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
+            blocks:
+              - sub_title: 역할
+                description: | # this will include new lines to allow paragraphs
+                  - Prometheus·Loki·Tempo·K8s 관측 데이터 수집 파이프라인 구축
+                  - Provider 실패와 no signal을 구분해 장애 분석 근거의 신뢰도와 판단 기준 개선
+                  - 1MiB payload 제한과 데이터 축약 처리로 대용량 관측 데이터 전송 안정성 확보
+                  - ConfigMap·Secret 참조 분석에서 민감정보 비노출을 37개 테스트로 검증
+              - sub_title: 기술
+                description: |
+                  - Backend: Python, FastAPI, PostgreSQL
+                  - Frontend: React, TypeScript
+                  - DevOps / Observability: Kubernetes, Docker, Helm, Prometheus, Loki, Tempo, OpenTelemetry
 
           - layout: top-left
             title: RepoPilot
@@ -138,27 +145,44 @@ content:
             #     image: images/skills/docker.svg
             quote: >
               GitHub 연동 일정·문서 관리 및 AI 코드 질의응답 서비스
-            description: | # this will include new lines to allow paragraphs
-              - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
-              - 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
-              - Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+            blocks:
+              - sub_title: 역할
+                description: | # this will include new lines to allow paragraphs
+                  - GitHub OAuth 로그인 및 쿠키 기반 인증 흐름을 구현하여 사용자별 워크스페이스 접근 제어 구축
+                  - 게시글·일정·회의록을 통합 관리하는 Board/Calendar CRUD와 React 대시보드 연동 구현
+                  - Repository 코드·문서 기반 질의응답을 위한 RAG 검색 및 AI Agent 응답 API 구현
+              - sub_title: 기술
+                description: |
+                  - Backend / DB: Python, FastAPI, SQLAlchemy, PostgreSQL
+                  - Frontend: React, Vite, JavaScript
+                  - AI / Infra: OpenAI API, LangChain, LangGraph, ChromaDB, Docker
 
           - layout: top-left
             title: MNIST & LLM
             caption: 2026.05.23. - 2026.06.03. / (5명)
-            link: https://github.com/Jungle-12-303/week13-team-07-mnist-lab
+            links:
+              - https://github.com/Jungle-12-303/week13-team-07-mnist-lab
+              - https://github.com/Jungle-12-303/week14-team-07-gpt-lab.git
             quote: >
               딥러닝 모델의 학습 과정과 Transformer 기반 언어 모델 구조를 직접 실습하며 성능 분석한 프로젝트
-            description: | # this will include new lines to allow paragraphs
-              - BatchNorm·Dropout·Learning Rate·Epoch 조건별 실험을 통해 최고 테스트 정확도 98.68% 달성 및 과적합 분석
-              - BPE Tokenizer, Dataset, Embedding, Attention, TransformerBlock을 구현하며 mini GPT의 핵심 구조 학습
-              - 학습 loss, validation loss, perplexity, 과적합 지표를 기록하며 모델 성능 변화 분석
+            blocks:
+              - sub_title: 역할
+                description: | # this will include new lines to allow paragraphs
+                  - BatchNorm·Dropout·Learning Rate·Epoch 조건별 실험을 통해 최고 테스트 정확도 98.68% 달성 및 과적합 분석
+                  - BPE Tokenizer, Dataset, Embedding, Attention, TransformerBlock을 구현하며 mini GPT의 핵심 구조 학습
+                  - 학습 loss, validation loss, perplexity, 과적합 지표를 기록하며 모델 성능 변화 분석
+              - sub_title: 기술
+                description: |
+                  - ML / Deep Learning: Python, NumPy, PyTorch
+                  - Experiment / Visualization: Jupyter Notebook, Matplotlib
 
           - layout: top-left
             title: PintOS
             # sub_title: 팀 프로젝트(4명)
             caption: 2026.04.24. - 2026.05.21. / (4명)
-            link: https://github.com/Jungle-12-303/week11-team-02-pintos-vm
+            links:
+              - https://github.com/Jungle-12-303/week09-team-05-pintos-threads
+              - https://github.com/Jungle-12-303/week11-team-02-pintos-vm
             # additional_links:
             #   - title: github.com/Jungle-12-303/week11-team-02-pintos-vm
             #     icon: fab fa-github
@@ -179,11 +203,17 @@ content:
             #     image: images/skills/gnu.svg
             quote: >
               교육용 OS 커널 구현 프로젝트
-            description: | # this will include new lines to allow paragraphs
-              - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
-              - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
-              - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
-              - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
+            blocks:
+              - sub_title: 역할
+                description: | # this will include new lines to allow paragraphs
+                  - Busy-wait 제거 및 우선순위 스케줄링으로 CPU 낭비 감소
+                  - 시스템콜·파일 디스크립터 구현으로 유저-커널 요청 처리
+                  - Demand Paging 구현으로 필요한 시점에 메모리 로딩 처리
+                  - Swap·Frame Eviction 구현으로 물리 메모리 부족 상황 대응
+              - sub_title: 기술
+                description: |
+                  - Language / Environment: C, PintOS, x86-64
+                  - Debugging: QEMU, GDB
 
       - layout: left-top
         title: 인공지능사관학교
@@ -226,12 +256,12 @@ content:
 
       - layout: left-top
         title: 바다생태연구소
-        # sub_title: 연구원
+        sub_title: 연구원
         caption: 2023.03.02. - 2025.03.31.
         sub_items:
           - layout: top-left
             title: 해양 생태팀
-            sub_title: 연구원
+            # sub_title: 연구원
             # caption: 2026.06.22. - 2026.07.25.(5명)
             # additional_links:
             #   - title: github.com/minmings111/Kyro-jungle-final

@@ -24,11 +24,7 @@
       {%- if entry.sub_title -%}<p><b>{{ entry.sub_title }}</b></p>{%- endif -%}
       {%- if entry.caption -%}<p>{{ entry.caption }}</p>{%- endif -%}
 
-      {%- if entry.link -%}
-        {% include a.html href=entry.link class="link" %}
-          {%- if entry.link_text -%}{{ entry.link_text }}{%- else -%}{{ entry.link }}{%- endif -%}
-        </a>
-      {%- endif -%}
+      {% include visible-links.html link=entry.link link_text=entry.link_text links=entry.links class_name="entry-list-link" %}
 
       {%- if entry.additional_links -%}
         <p class="no-print aditional-links">
@@ -50,6 +46,7 @@
       {%- if entry.description -%}
         {{ entry.description | strip | markdownify }}
       {%- endif -%}
+      {% include content-blocks.html blocks=entry.blocks %}
       {%- if has_regular_sub_items -%}
         <div class="nested-content">
           {% for nested_entry in entry.sub_items %}

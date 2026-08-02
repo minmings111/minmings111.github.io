@@ -9,7 +9,7 @@
   {% assign quote_after_title = true %}
 {% endif %}
 
-<article class="row clearfix layout layout-{{ nested_render_layout }} nested-list-item nested-layout-{{ nested_layout }}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
+<article class="row clearfix layout layout-{{ nested_render_layout }} nested-list-item nested-layout-{{ nested_layout }}{% if nested_item.links %} nested-has-links{% if nested_item.links.size > 1 %} nested-has-multiple-links{% endif %}{% endif %}"{% if nested_item.indent %} style="--nested-sub-left-indent: {{ nested_item.indent }};"{% endif %}>
   <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details nested-list-details">
     <div class="nested-list-heading">
       <h4 id="{{ nested_item.title | slugify }}">{{ nested_item.title }}</h4>
@@ -17,17 +17,11 @@
     {%- if nested_item.quote and quote_after_title -%}
       <p class="quote nested-list-quote nested-list-title-quote">{{ nested_item.quote }}</p>
     {%- endif -%}
-    {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.additional_links or nested_item.skill_icons -%}
+    {%- if nested_item.sub_title or nested_item.caption or nested_item.link or nested_item.links or nested_item.additional_links or nested_item.skill_icons -%}
       <div class="nested-list-meta">
         {%- if nested_item.sub_title -%}<p><b>{{ nested_item.sub_title }}</b></p>{%- endif -%}
         {%- if nested_item.caption -%}<p>{{ nested_item.caption }}</p>{%- endif -%}
-        {%- if nested_item.link -%}
-          <p class="nested-list-link">
-            {% include a.html href=nested_item.link class="link" %}
-              {%- if nested_item.link_text -%}{{ nested_item.link_text }}{%- else -%}{{ nested_item.link }}{%- endif -%}
-            </a>
-          </p>
-        {%- endif -%}
+        {% include visible-links.html link=nested_item.link link_text=nested_item.link_text links=nested_item.links class_name="nested-list-link" %}
         {%- if nested_item.additional_links -%}
           <p class="no-print aditional-links">
             {% for link in nested_item.additional_links %}
@@ -54,6 +48,7 @@
         {{ nested_item.description | strip | markdownify }}
       </div>
     {%- endif -%}
+    {% include content-blocks.html blocks=nested_item.blocks class_name="nested-list-blocks" %}
     {%- if nested_item.sub_items -%}
       <div class="nested-content">
         {% for child_entry in nested_item.sub_items %}

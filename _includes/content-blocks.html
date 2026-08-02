@@ -1,0 +1,19 @@
+{%- if include.blocks -%}
+  <div class="{{ include.class_name | default: 'content-blocks' }}">
+    {%- for block_item in include.blocks -%}
+      <section class="content-block">
+        {%- if block_item.title or block_item.sub_title -%}
+          <p class="content-block-title"><b>{{ block_item.title | default: block_item.sub_title }}</b></p>
+        {%- endif -%}
+        {%- if block_item.quote -%}
+          <p class="quote content-block-quote">{{ block_item.quote }}</p>
+        {%- endif -%}
+        {%- if block_item.description -%}
+          <div class="content-block-body">
+            {{ block_item.description | strip | markdownify }}
+          </div>
+        {%- endif -%}
+      </section>
+    {%- endfor -%}
+  </div>
+{%- endif -%}
