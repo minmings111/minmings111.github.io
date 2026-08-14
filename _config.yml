@@ -234,7 +234,7 @@ content:
           - layout: top-left
             title: Medi
             # sub_title: 팀 프로젝트(5명)
-            caption: 2026.10.17. - 2026.12.07. / (5명)
+            caption: 2025.10.17. - 2025.12.07. / (5명)
             link: https://github.com/minmings111/MEDI_Backend_aica
             # additional_links:
             #   - title: https://github.com/minmings111/MEDI_Backend_aica
@@ -304,7 +304,6 @@ content:
             #   - title: PRIMER
             #     image: images/skills/primer.png
             description: | # this will include new lines to allow paragraphs
-              - 현장 조사
               - 동물플랑크톤, 해조류 시료 분석 및 결과 보고서 작성
               - 수산 생물 생리 및 배양 시험
               - 생물 데이터 분석 및 기타 업무 자동화
