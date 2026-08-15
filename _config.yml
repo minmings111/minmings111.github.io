@@ -67,7 +67,7 @@ content:
           - layout: top-left
             title: Kyro
             # sub_title: 팀 프로젝트(5명)
-            caption: 2026.06.22. - 2026.07.25. / (5명)
+            caption: 2026.06.22. - 2026.07.25.(5주) / (5명)
             link: https://github.com/minmings111/Kyro-jungle-final
             # additional_links:
             #   - title: github.com/minmings111/Kyro-jungle-final
@@ -119,7 +119,7 @@ content:
           - layout: top-left
             title: RepoPilot
             # sub_title: 개인 프로젝트
-            caption: 2026.06.05. - 2026.06.19.
+            caption: 2026.06.05. - 2026.06.19.(2주)
             link: https://github.com/minmings111/RepoPilot
             # additional_links:
             #   - title: github.com/minmings111/RepoPilot
@@ -166,7 +166,7 @@ content:
 
           - layout: top-left
             title: 신경망 & mini-GPT
-            caption: 2026.05.23. - 2026.06.03. / (5명)
+            caption: 2026.05.23. - 2026.06.03.(2주) / (5명)
             links:
               - title: MNIST Lab
                 url: https://github.com/minmings111/week13-team-07-mnist-lab
@@ -188,7 +188,7 @@ content:
           - layout: top-left
             title: PintOS
             # sub_title: 팀 프로젝트(4명)
-            caption: 2026.04.24. - 2026.05.21. / (4명)
+            caption: 2026.04.24. - 2026.05.21.(4주) / (4명)
             links:
               - title: PintOS Threads
                 url: https://github.com/minmings111/week09-team-05-pintos-threads
@@ -234,7 +234,7 @@ content:
           - layout: top-left
             title: Medi
             # sub_title: 팀 프로젝트(5명)
-            caption: 2025.10.17. - 2025.12.07. / (5명)
+            caption: 2025.10.17. - 2025.12.07.(8주) / (5명)
             link: https://github.com/minmings111/MEDI_Backend_aica
             # additional_links:
             #   - title: https://github.com/minmings111/MEDI_Backend_aica
